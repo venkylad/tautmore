@@ -1,0 +1,400 @@
+.studentperformance-wrapper {
+  background: white;
+  padding: 2rem;
+}
+
+.certi-heading {
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+
+.certi-box {
+  height: 180px;
+  padding: 1.5rem;
+  border: 3px solid rgba(0, 0, 0, 0.2);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.certi-image {
+  padding-bottom: 1.5rem;
+}
+
+.certi-date {
+  font-weight: 700;
+}
+
+.concept-wrapper {
+  background-color: #ffffff;
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  height: 80vh;
+}
+
+.concept-top {
+  padding: 2rem;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  height: 32%;
+}
+
+.concept-bottom {
+  padding: 2rem;
+  height: 68%;
+  background: #f7f9fa;
+  overflow-y: auto;
+}
+
+.concept-12 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #6f62f5;
+}
+
+.concept-cleared {
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-left: 0.2rem;
+  color: black;
+}
+
+.concept-89 {
+  color: rgba(0, 0, 0, 0.4);
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.concept-outerprogressbar {
+  margin-top: 0.2rem;
+  background: #cdcfd0;
+  width: 100%;
+  height: 12px;
+  border-radius: 10px;
+}
+
+.concept-innerprogressbar {
+  background: #6f62f5;
+  width: 37%;
+  height: 12px;
+  border-radius: 10px;
+}
+
+.concept-chapterhead {
+  color: rgba(0, 0, 0, 0.4);
+  font-weight: 700;
+  font-size: 1.5rem;
+  padding: 0.5rem 0rem;
+}
+
+.concept-chaptersubheading {
+  color: #000000;
+  font-weight: 700;
+  padding: 0.5rem 0rem;
+  font-size: 1.3rem;
+}
+
+.concept-selectinput {
+  border-radius: 50% !important;
+  background: #008480;
+  padding: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.concept-selectinput svg {
+  color: #fff;
+}
+
+.concept-heading {
+  font-weight: 700;
+  color: black;
+  font-size: 1.75rem;
+}
+
+.recent-subheading {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.recent-topsubheading {
+  color: rgba(0, 0, 0, 0.4);
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.perform-wrapper {
+  background: #f7f9fa;
+  margin: 2rem 0rem;
+}
+
+.upcomming-wrapper {
+  background: #f7f9fa;
+}
+
+.congrats-wrapper {
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  padding: 1.2rem;
+}
+
+.upcoming-heading {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.upcoming-select {
+  background: transparent;
+  border: none;
+  outline: none;
+  font-weight: 700;
+}
+
+.perform-head-wrapper {
+  padding: 1rem;
+}
+
+.perform-bottom-border {
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+}
+
+.perform-1col {
+  padding: 1.5rem 1rem;
+}
+
+.perform-2col {
+  padding: 1.5rem 1rem;
+}
+
+.perform-3col {
+  padding: 1.5rem 1rem 0rem 1rem;
+}
+
+.perform-subheading {
+  font-weight: 700;
+  color: black;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.perform-num {
+  color: #6f62f5;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.perform-cleared {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: rgba(0, 0, 0, 0.4);
+  margin-left: 0.5rem;
+}
+
+.perform-viewbtn {
+  background: white;
+  margin-top: 2rem;
+  font-weight: 700;
+}
+
+.perform-viewbtn:hover {
+  background: transparent;
+}
+
+.perform-viewbtn:focus {
+  background: transparent;
+}
+
+.recent-view {
+  text-decoration: underline;
+  color: #6f62f5;
+  font-weight: 700;
+}
+
+.upcom-headingwrap {
+  padding: 1rem;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.4);
+}
+
+.upcoming-body {
+  padding: 1rem;
+}
+
+.upcoming-date {
+  margin-left: 0.2rem;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: rgba(0, 0, 0, 0.4);
+  margin-top: 0.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.class-barouter {
+  margin-top: 0.2rem;
+  background: #cdcfd0;
+  width: 100%;
+  height: 12px;
+  border-radius: 10px;
+}
+
+.class-barinner {
+  background: #f3c19d;
+  width: 37%;
+  height: 12px;
+  border-radius: 10px;
+}
+
+.overall-barouter {
+  margin-top: 0.2rem;
+  background: #cdcfd0;
+  width: 100%;
+  height: 12px;
+  border-radius: 10px;
+}
+
+.overall-barinner {
+  background: #fbe192;
+  width: 37%;
+  height: 12px;
+  border-radius: 10px;
+}
+
+.class-remanhead {
+  color: #de7686;
+  font-weight: 700;
+  text-align: right;
+}
+
+.class-heading {
+  color: #e98943;
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+
+.readiness-heading {
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: #6f62f5;
+}
+
+.syllabus-heading {
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: #000000;
+}
+
+.current-heading {
+  color: #000000;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.current-image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: white;
+  width: 80px;
+  font-weight: 700;
+  height: 80px;
+  margin-bottom: 1rem;
+}
+
+.current-class {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #6f62f5;
+  margin-bottom: 1rem;
+}
+
+.current-content {
+  font-weight: 700;
+}
+
+.current-date {
+  color: red;
+  font-weight: 700;
+  margin-left: 0.3rem;
+}
+
+.congtz-heading {
+  color: #000000;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.congz-image1 {
+  background: #f7f9fa;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.congz-image2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #f7f9fa;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.perform-imagewrapper {
+  margin: 1rem 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.congz-goldHeading {
+  color: gold;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.congtz-content {
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+/*# sourceMappingURL=studentPerformance.css.map */

@@ -1,0 +1,86 @@
+.approval-header .close {
+  margin: 0;
+}
+
+.approval-modal .approval-header {
+  background-color: transparent;
+}
+
+.approval-modal .approval-header .modal-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.approval-modal .approval-header .close {
+  -webkit-transform: none;
+          transform: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.approval-modal .approval-header .close span {
+  color: grey;
+  font-weight: 700;
+  font-size: 3.5rem;
+}
+
+.approval-modal .approval-header .close:active {
+  -webkit-transform: none;
+          transform: none;
+}
+
+.approval-modal .approval-header .close:hover,
+.approval-modal .approval-header .close:focus,
+.approval-modal .approval-header .close:active {
+  -webkit-transform: none;
+          transform: none;
+}
+
+.approve-footer {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: none;
+  margin-top: 2rem;
+  margin-bottom: 1.2rem;
+}
+
+.modal-content {
+  border-radius: 0px;
+}
+
+.modal-body .approval-heading {
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-align: center;
+  color: black;
+}
+
+.modal-body .approval-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.modal-body .approval-body input {
+  margin-top: 2rem;
+  width: 240px;
+  padding: 10px 10px;
+  font-weight: 700;
+}
+
+.body-wrapper {
+  padding: 0;
+}
+/*# sourceMappingURL=approvalModal.css.map */

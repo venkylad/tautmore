@@ -1,0 +1,40 @@
+.tab-content {
+  padding: 30px;
+}
+
+.field-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+  width: 100%;
+  height: 100%;
+}
+
+.tab_item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  width: 100%;
+  height: 100%;
+  background: white;
+  border-radius: 18px;
+  margin-bottom: 20px;
+}
+
+.tab_item p {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.tab_item a {
+  font-size: 18px;
+  margin: 0;
+}
+
+.tab_item .name {
+  width: 400px;
+}

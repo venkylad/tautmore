@@ -1,0 +1,64 @@
+.approval-header .close {
+  margin: 0;
+}
+.approval-modal .approval-header {
+  // background: transparent;
+  background-color: transparent;
+
+  .modal-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+  }
+  .close {
+    transform: none;
+    box-shadow: none;
+  }
+  .close span {
+    color: grey;
+    font-weight: 700;
+    font-size: 3.5rem;
+  }
+  .close:active {
+    transform: none;
+  }
+}
+.approval-modal .approval-header .close:hover,
+.approval-modal .approval-header .close:focus,
+.approval-modal .approval-header .close:active {
+  transform: none;
+}
+.approve-footer {
+  justify-content: center;
+  border: none;
+  margin-top: 2rem;
+  margin-bottom: 1.2rem;
+}
+
+.modal-content {
+  border-radius: 0px;
+}
+.modal-body {
+  .approval-heading {
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-align: center;
+    color: black;
+  }
+  .approval-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    input {
+      margin-top: 2rem;
+      width: 240px;
+      //   height: 40px;
+      padding: 10px 10px;
+      font-weight: 700;
+    }
+  }
+}
+.body-wrapper {
+  padding: 0;
+}

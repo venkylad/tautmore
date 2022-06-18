@@ -1,0 +1,514 @@
+.rp-manage-school-header-title {
+    color: #454c4e;
+    font-size: 28px;
+    font-weight: Bold;
+    letter-spacing: 0;
+    line-height: 36px;
+  }
+
+.PaymentsTotalStu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icontitleCardBody{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.payementDetDesc{
+  display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 50px;;
+}
+
+.paymentDetDescSecond{
+  display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 50px;;
+}
+
+.titleSection{
+    text-align: center;
+}
+
+.revenueCard{
+    padding-right: 4.5rem;
+    padding-left: 4.5rem;
+}
+
+.examsAndTestTabPay .nav-link{
+    font-weight: 500 !important;
+    font-size: 24px !important;
+    color: #20282a !important;
+}
+
+.examsAndTestTabPay li{
+    width: 18% !important;
+    text-align: center;
+}
+
+.datalistPayments{
+    margin: 40px 0 30px 0;
+    /* justify-content: flex-end !important; */
+  }
+
+.datalistPayments .filter-section input {
+    border-radius: 5px !important;
+    height: 46px;
+    border-radius: 10px !important;
+    margin-right: 15px;
+  }
+
+.rp-payments-head-main{
+    width: 100%;
+    justify-content: flex-end !important;
+}
+
+.rp-payments-head  .sort-dropdown {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px !important;
+    border: 1pt solid #454c4e !important;
+    background-color: #fff;
+    padding: 1.02rem 0.65rem !important;
+  }
+
+  .rp-payments-head {
+    width: 23%;
+  }
+
+  .paymentfilterSpan {
+    color: #20282a;
+    font-size: 16px;
+  }
+
+  .dropdown .customPaymentdropdown {
+    transform: translate3d(5px, 47px, 0px) !important;
+    min-width: 15rem !important;
+  }
+
+  .datalistPayments .filter-section input {
+    border-radius: 5px !important;
+    height: 46px;
+    border-radius: 10px !important;
+    margin-right: 15px;
+  }
+
+  .custom-filtersection input {
+    color: #20282a;
+    font-size: 16px;
+    border-radius: 10px !important;
+    border: 1pt solid #454c4e !important;
+    max-width: 250px !important;
+  }
+
+  .dropdown .customPaymentdropdown .dropdown-item {
+    font-size: 15px;
+    color: #20282a;
+  }
+
+  .combinationCard{
+      display: flex;
+  }
+  
+  .examViewDet{
+    font-size: 16px;
+    border:1pt solid #8aa099 !important;
+    background: #43AA8B !important;
+    color: #fff;
+    /* font-weight: 700; */
+    width: 150px;
+    margin-bottom: 10px;
+    text-align: center;
+    padding: 12px 0px !important;
+    margin-left: 20px;
+    position: absolute;
+    bottom: 0px;
+    right: 15px;
+}
+
+.combinationCardAmt{
+    margin-top: 15px;;
+}
+
+.badge-active {
+    color: #28c76f;
+    display: flex;
+  }
+  
+  .badge-active .badge-dot-active {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #28c76f;
+    position: relative;
+    top: 4px;
+    margin-right: 5px;
+  }
+  
+  .badge-leave {
+    color:orange;
+    display: flex;
+  }
+  
+  .badge-leave .badge-dot-leave {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: orange;
+    position: relative;
+    top: 4px;
+    margin-right: 5px;
+  }
+
+  .PaymentDetClock{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .paymentDetBtn{
+    font-size: 16px;
+    border:1pt solid #8aa099 !important;
+    background: #43AA8B !important;
+    color: #fff;
+    /* font-weight: 700; */
+    width: 150px;
+    margin-bottom: 10px;
+    text-align: center;
+    padding: 12px 0px !important;
+    margin-left: 20px;
+    position: absolute;
+    right: 0px;
+}
+
+.rp-manage-schools-main
+  > div
+  > div
+  > div
+  > div
+  > div
+  > .rdt_TableCol
+  > div
+  > div {
+  color: #20282a;
+  font-size: 16px;
+  font-weight: 900;
+  letter-spacing: 0;
+  line-height: 16px;
+}
+
+.rp-manage-schools-main .rdt_Table .rdt_TableBody .rdt_TableRow {
+  min-height: 60px;
+}
+
+.PaymentDetClock span{
+  padding-left: 10px;
+  font-size: 20px;
+}
+
+.paymentDetCardBody{
+  padding: 50px;
+}
+
+.PaymentDetDescription{
+  margin-bottom: 50px;
+}
+
+.paymentDetListItems{
+  margin-bottom: 0px;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.paymentDetListItems svg{
+  color: green;
+}
+
+.paymentDetListItems li{
+  color: #2c2c2c;
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  display: flex;
+    align-items: center;
+}
+
+.paymentDetShortDesc{
+  font-size: 16px;
+}
+
+.paymentDetListItems li span{
+  padding-left: 10px;
+}
+
+.PaymentDetailCard{
+  margin-top: 30px;;
+}
+
+.payments-nav-bottom-border {
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background-color: black;
+  bottom: 0px;
+}
+
+.rp-manage-school-input-title {
+  color: #20282a;
+  font-size: 15px;
+  font-weight: 900;
+  letter-spacing: 0;
+  line-height: 30px;
+}
+
+.tautmore-admin-selectbox .select__control {
+  color: #20282a;
+  font-size: 15px;
+}
+
+.tautmore-admin-selectbox
+.select__control
+.select__indicator
+.select__indicator-separator {
+color: #20282a;
+}
+
+.rp-manage-school-input-title {
+  color: #20282a;
+  font-size: 15px;
+  font-weight: 900;
+  letter-spacing: 0;
+  line-height: 30px;
+}
+
+.rp-manage-school_error-message {
+  color: #f70808;
+  /* // font-family: Avenir; */
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 19px;
+}
+
+.tautmore-input-style {
+  /* // border-radius: 10px !important;
+  // border: 1pt solid #454C4E !important; */
+  color: #20282a;
+  font-size: 15px;
+}
+
+.tautmore-admin-selectbox .select__control {
+  /* // border: 1pt solid #454C4E !important; */
+  color: #20282a;
+  font-size: 15px;
+}
+
+.react-tel-input input {
+  width: 100% !important;
+}
+/* // .tautmore-admin-selectbox .select__control .select__indicator{
+//   color: #20282A;
+// } */
+
+.tautmore-admin-selectbox
+  .select__control
+  .select__indicator
+  .select__indicator-separator {
+  color: #20282a;
+}
+
+input::placeholder {
+  font-size: 14px !important;
+}
+
+  .tautmore-manage-school_submit{
+    border:1pt solid #8aa099 !important;
+  background: #43AA8B !important;
+  }
+  .react-tel-input input {
+    width: 100% !important;
+  }
+
+.removeExamBtn{
+  padding: 0;
+    color: red !important;
+    background-color: #fff !important;
+    box-shadow: none;
+    float: right;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+}
+
+.removeExamBtn:hover{
+  color: red !important;
+  box-shadow: none !important;
+}
+
+.removeExamBtn .IconMinus{
+  margin-right: 5px;
+}
+
+.addExamBtn{
+  padding: 0;
+  color: #5e50ee !important;
+    background-color: #f8f8f8 !important;
+    box-shadow: none;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.addExamBtn:hover{
+  color: #5e50ee !important;
+  box-shadow: none !important;
+}
+
+.addExamBtn:focus{
+  color: #5e50ee !important;
+  box-shadow: none !important;
+}
+
+.addExamBtn .IconPlus{
+  margin-right: 5px;
+}
+
+.subconcept-select {
+  input {
+    height: auto;
+    border: 0 !important;
+  }
+  .select__control {
+    height: 45px;
+    border-radius: 0;
+    border: 2px solid #c3cfd9 !important;
+    box-shadow: none !important;
+  }
+}
+
+.rp-manageSchool-head {
+  width: 23%;
+  margin-bottom: 15px;
+
+  .subconcept-select {
+    .select__control {
+      padding: 0.85rem 0.65rem !important;
+      border-radius: 10px !important;
+      border: 1pt solid #454c4e !important;
+      box-shadow: none !important;
+      cursor: pointer;
+      .select__value-container {
+        padding: 0 !important;
+        .css-b8ldur-Input {
+          margin: 0 !important;
+          padding: 0 !important;
+        }
+      }
+      .select__indicators {
+        .select__indicator-separator {
+          margin: 0 !important;
+          padding: 0 !important;
+          height: 0 !important;
+          width: 0 !important;
+        }
+        .select__dropdown-indicator {
+          padding: 0 !important;
+          svg {
+            fill: #626262;
+            height: 16px;
+            width: 16px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.admindatarow {
+  font-size: 15px;
+  color: #20282a;
+}
+
+.courseDateFilter{
+  display: flex;
+  justify-content: space-around;
+}
+
+.examPaymentsDetailsCard{
+  margin-top: 50px;
+}
+
+.delete-popup {
+  top: 25%;
+  text-align: center;
+}
+
+.delete-popup .modal-footer {
+  -webkit-box-pack: center !important;
+      -ms-flex-pack: center !important;
+          justify-content: center !important;
+}
+
+.delete-popup .modal-footer button {
+  font-weight: 900;
+}
+
+.delete-popup .modal-footer button.btn-secondary {
+  background-color: #1c1c1c !important;
+}
+
+.delete-popup .modal-content {
+  min-height: 150px;
+  border-radius: 10px;
+}
+
+.delete-popup .modal-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #20282a;
+  font-size: 19px;
+  font-weight: 900;
+}
+
+.admin-details-edit {
+  font-size: 16px;
+  border: 1pt solid #8aa099 !important;
+  background: #43aa8b !important;
+  color: #fff;
+  /* font-weight: 700; */
+  width: 150px;;
+  text-align: center;
+  padding: 12px 0px !important;
+  margin-right: 15px;
+}
+
+  .admin-details-delete{
+    font-size: 16px;
+    /* background-color: #1e1e1e; */
+    border-color: #1e1e1e !important;
+    color: #1e1e1e !important;
+    /* font-weight: 700; */
+    width: 100px;
+    text-align: center;
+    padding: 12px 0px !important;
+    margin-right: 15px;
+  }
+  .admin-details-delete.back {
+    margin-right: 0;
+  }
+

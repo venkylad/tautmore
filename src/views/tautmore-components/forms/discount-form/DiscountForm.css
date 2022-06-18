@@ -1,0 +1,66 @@
+.rp-manage-school-input-title {
+  color: #20282a;
+  font-size: 15px;
+  font-weight: 900;
+  letter-spacing: 0;
+  line-height: 30px;
+}
+
+.rp-manage-school_error-message {
+  color: #f70808;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 19px;
+}
+
+.tautmore-input-style {
+  color: #20282a;
+  font-size: 15px;
+}
+
+.tautmore-admin-selectbox .select__control {
+  color: #20282a;
+  font-size: 15px;
+}
+
+.react-tel-input input {
+  width: 100% !important;
+}
+
+.tautmore-admin-selectbox
+.select__control
+.select__indicator
+.select__indicator-separator {
+  color: #20282a;
+}
+
+input::-webkit-input-placeholder {
+  font-size: 14px !important;
+}
+
+input:-ms-input-placeholder {
+  font-size: 14px !important;
+}
+
+input::-ms-input-placeholder {
+  font-size: 14px !important;
+}
+
+input::placeholder {
+  font-size: 14px !important;
+}
+
+.tautmore-manage-school_submit {
+  border: 1pt solid #8aa099 !important;
+  background: #43AA8B !important;
+}
+
+.react-tel-input input {
+  width: 100% !important;
+}
+
+.customInputGroup .select__indicator-separator {
+  display: none;
+}
+/*# sourceMappingURL=DiscountForm.css.map */

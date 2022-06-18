@@ -1,0 +1,85 @@
+.manage-image-main {
+    h4 {
+        color: #454C4E;
+        font-size: 28px;
+        font-weight: Bold;
+        letter-spacing: 0;
+        line-height: 36px;
+    }
+    .manage-image {
+        background-color: #D9E0EE;
+        width: 100%;
+        margin: auto;
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+        margin-top: 30px;
+        h5 {
+            color: #454C4E;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        p {
+            font-size: 12px;
+        }
+        .manage-image-sub {
+            background-color: #EBEFF9;
+            padding: 15px;
+            border-radius: 10px;
+            border: 2px dotted #ddd;
+            button {
+                background-color: #fff;
+                border: 0;
+                border-radius: 5px;
+                height: 40px;
+                padding: 0px 20px;
+                color: #454C4E;
+                font-weight: bold;
+                svg {
+                    fill: #fff;
+                    margin-right: 10px;
+                }
+            }
+            .upload-image {
+                background-color: #fff;
+                margin-top: 20px;
+                padding: 10px 0px;
+                .row {
+                    display: flex;
+                    align-items: center;
+                    height: 100%;
+                }
+                img {
+                    height: 35px;
+                    width: 35px;
+                }
+                svg {
+                    cursor: pointer;
+                }
+                #imgCanvas {
+                    height: 0;
+                    width: 0;
+                }
+            }
+            
+        }
+    }
+    .copy-icon {
+        margin-right: 15px;
+    }
+}
+
+
+@media only screen and (max-width: 575px) {
+    .manage-image-main {
+        .manage-image {
+            .upload-image {
+                padding: 15px;
+                height: auto !important;
+                .upload-image-middle {
+                    margin: 15px 0px;
+                }
+            }
+        }
+    }
+}

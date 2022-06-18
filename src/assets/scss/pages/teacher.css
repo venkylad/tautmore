@@ -1,0 +1,342 @@
+.teacher-heading h4 {
+  color: #454c4e;
+  font-size: 28px;
+  font-weight: Bold;
+  letter-spacing: 0;
+  line-height: 36px;
+}
+
+.teacher-heading p {
+  color: #454c4e;
+  font-size: 15px;
+  font-weight: Bold;
+  letter-spacing: 0;
+}
+
+.teacher-total {
+  text-align: right;
+}
+
+.teacher-total .total-count {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  margin-right: 0 !important;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.teacher-total .total-count h4 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 5px;
+  color: #454c4e;
+  font-size: 28px;
+  font-weight: 900;
+  letter-spacing: 0;
+  line-height: 36px;
+}
+
+.teacher-total .total-count h2 {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.new-teacher-btn {
+  border: 1pt solid #8aa099 !important;
+  background: #43aa8b !important;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  color: white;
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.new-teacher-btn:hover {
+  color: white;
+  -webkit-box-shadow: 0 8px 25px -8px #b8c2cc;
+          box-shadow: 0 8px 25px -8px #b8c2cc;
+}
+
+.new-teacher-btn .add-new-icon {
+  margin-right: 10px;
+}
+
+.teacher-navs {
+  position: relative;
+}
+
+.teacher-navs .teacher-nav-bottom-border {
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background-color: black;
+  bottom: 0px;
+}
+
+.teacher-navs .teacher-nav-item .teacher-nav-link {
+  padding: 0;
+  font-size: 16px !important;
+  margin-right: 30px;
+}
+
+.teacher-navs .teacher-nav-item .teacher-nav-link.active {
+  border-bottom: 5px solid #7367f0 !important;
+  background-color: transparent !important;
+  -webkit-transform: none !important;
+          transform: none !important;
+  -webkit-transition: none !important;
+  transition: none !important;
+  font-weight: 600 !important;
+}
+
+.teacher-search input {
+  position: relative;
+  padding: 1rem 0.5rem 1rem 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 40%;
+  font-weight: 600;
+  font-size: 18px;
+  border-radius: 2px;
+  border: 2px solid rgba(0, 0, 0, 0.3);
+}
+
+.teacher-search input::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.teacher-search input:-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.teacher-search input::-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.teacher-search input::placeholder {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.teacher-search .search-icon {
+  position: absolute;
+  top: 50%;
+  left: 3%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.teacher-extra-search select {
+  position: relative;
+  padding: 1rem 0.5rem 1rem 0.5rem;
+  width: 100%;
+  font-weight: 900;
+  font-size: 18px;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.rp-manage-schools-main
+> div
+> div
+> div
+> div
+> div
+> .rdt_TableCol
+> div
+> div {
+  color: #20282a;
+  font-size: 16px;
+  font-weight: 900;
+  letter-spacing: 0;
+  line-height: 16px;
+}
+
+.rp-manage-schools-main .rdt_Table .rdt_TableBody .rdt_TableRow {
+  min-height: 60px;
+}
+
+.teacher-table-container {
+  margin-top: 2rem;
+}
+
+.teacher-table-container .rdt_TableHeader {
+  display: none;
+}
+
+.teacher-table-container .rdt_Table {
+  background-color: transparent !important;
+}
+
+.teacher-table-container .rdt_Table .rdt_TableHead .rdt_TableHeadRow {
+  background-color: transparent;
+}
+
+.teacher-table-container .rdt_Table .rdt_TableHead .rdt_TableHeadRow .rdt_TableCol {
+  text-transform: uppercase;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.4);
+  font-weight: 600;
+}
+
+.teacher-table-container .rdt_Table .rdt_TableHead .rdt_TableHeadRow > :nth-child(1) div {
+  padding-left: 28px;
+}
+
+.teacher-table-container .rdt_Table .rdt_TableBody .rdt_TableRow {
+  font-size: 15px;
+  color: #000;
+  font-weight: 900 !important;
+  cursor: pointer;
+}
+
+.teacher-table-container .rdt_Table .rdt_TableBody .rdt_TableRow .rdt_TableCell {
+  font-weight: 900 !important;
+}
+
+.teacher-table-container .rdt_Table .rdt_TableBody .rdt_TableRow:hover {
+  background-color: #fff;
+}
+
+.teacher-table-container .rdt_Table .rdt_TableCol:first-child,
+.teacher-table-container .rdt_Table .rdt_TableCell:first-child {
+  -webkit-box-flex: 0 !important;
+      -ms-flex: 0 0 200px !important;
+          flex: 0 0 200px !important;
+}
+
+.salary-table .rdt_Table .rdt_TableHead .rdt_TableHeadRow > :nth-child(1) div {
+  padding-left: 0px;
+}
+
+.teacher-id {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.teacher-id .teacher-icon {
+  margin: 0px 20px 0px 10px;
+}
+
+.status {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.status .status-indicator {
+  height: 15px;
+  width: 15px;
+  background-color: green;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+.status .status-indicator.leave {
+  background-color: #e78439;
+}
+
+.status-extra-text {
+  color: rgba(0, 0, 0, 0.4) !important;
+}
+
+.pagination-active li a {
+  padding: 0.5rem 0.9rem;
+}
+
+.pagination-active li.active a {
+  border-radius: 50% !important;
+}
+
+.teacher-salary-details {
+  color: #d1455b !important;
+  font-weight: 900 !important;
+  font-size: 22px !important;
+  margin-top: 30px !important;
+}
+
+.teacher-details-status {
+  margin-left: 40px;
+}
+
+.teacher-details-status span {
+  font-size: 18px;
+}
+
+.salary-table .rdt_TableRow {
+  padding: 15px 0px;
+}
+
+.payment-status {
+  margin-bottom: 0;
+}
+
+.payment-status.Processing {
+  color: #da9d6f;
+}
+
+.payment-status.Credited {
+  color: #50867c;
+}
+
+.leave-status {
+  margin-bottom: 0;
+}
+
+.leave-status.pending {
+  color: #da9d6f;
+}
+
+.leave-status.approved {
+  color: #50867c;
+}
+
+.leave-status.rejected {
+  color: #c8a5a4;
+}
+
+.leave-no {
+  margin: 0px 30px 0px 10px !important;
+}
+
+.table-action button {
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.table-action button .approve-btn {
+  color: #227668;
+}
+
+.table-action button .reject-btn {
+  color: #d2455b;
+}
+
+.list-button {
+  padding: 12px 8px;
+}
+/*# sourceMappingURL=teacher.css.map */

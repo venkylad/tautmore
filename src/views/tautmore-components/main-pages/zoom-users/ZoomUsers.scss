@@ -1,0 +1,167 @@
+.totalusersZoom {
+    text-align: right;
+    width: 100%;
+    float: right;
+    /* h4 {
+      margin-right: 15px;
+    }
+    h2,
+    h4 {
+      display: inline-block;
+    } */
+  }
+
+  .ZoomTotal-users {
+    text-align: right;
+  }
+
+  .discount-title {
+    color: #454c4e;
+    font-size: 28px;
+    font-weight: Bold;
+    letter-spacing: 0;
+    line-height: 36px;
+}
+
+.discount-para{
+    color: #2c2c2c;
+    font-size: 15px;
+}
+
+.badge-active {
+    color: #28c76f;
+    display: flex;
+  }
+  
+  .badge-active .badge-dot-active {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #28c76f;
+    position: relative;
+    top: 4px;
+    margin-right: 5px;
+  }
+  
+  .badge-leave {
+    color:orange;
+    display: flex;
+  }
+  
+  .badge-leave .badge-dot-leave {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: orange;
+    position: relative;
+    top: 4px;
+    margin-right: 5px;
+  }
+
+  .badge-expired{
+      color: red;
+      display: flex;
+  }
+
+  .rp-manage-schools-main
+  > div
+  > div
+  > div
+  > div
+  > div
+  > .rdt_TableCol
+  > div
+  > div {
+  color: #20282a;
+  font-size: 16px;
+  font-weight: 900;
+  letter-spacing: 0;
+  line-height: 16px;
+}
+
+.rp-manageSchool-head-main-zoom {
+  width: 100%;
+  justify-content: flex-end !important;
+}
+
+.rp-manageSchool-head-zoom .sort-dropdown {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 10px !important;
+  border: 1pt solid #454c4e !important;
+  background-color: #fff;
+  padding: 1.02rem 0.65rem !important;
+}
+
+.adminfilterdisSpan {
+  color: #20282a;
+  font-size: 16px;
+}
+
+.custom-filtersection input {
+  color: #20282a;
+  font-size: 16px;
+  border-radius: 10px !important;
+  border: 1pt solid #454c4e !important;
+  max-width: 250px !important;
+}
+
+.dropdown .customadmindropdowndis {
+  transform: translate3d(5px, 47px, 0px) !important;
+  min-width: 15rem !important;
+}
+
+.dropdown .customadmindropdowndis .dropdown-item {
+  font-size: 15px;
+  color: #20282a;
+}
+
+.rp-manageSchool-head-zoom {
+  width: 23%;
+}
+
+.datalistzoom .zoomfilter-section input{
+  border-radius: 5px !important;
+  height: 46px;
+  border-radius: 10px !important;
+  margin-right: 15px;
+}
+
+.rp-manageSchool-head-zoom {
+  width: 23%;
+  margin-bottom: 15px;
+
+  .subconcept-select {
+    .select__control {
+      padding: 0.85rem 0.65rem !important;
+      border-radius: 10px !important;
+      border: 1pt solid #454c4e !important;
+      box-shadow: none !important;
+      cursor: pointer;
+      .select__value-container {
+        padding: 0 !important;
+        .css-b8ldur-Input {
+          margin: 0 !important;
+          padding: 0 !important;
+        }
+      }
+      .select__indicators {
+        .select__indicator-separator {
+          margin: 0 !important;
+          padding: 0 !important;
+          height: 0 !important;
+          width: 0 !important;
+        }
+        .select__dropdown-indicator {
+          padding: 0 !important;
+          svg {
+            fill: #626262;
+            height: 16px;
+            width: 16px;
+          }
+        }
+      }
+    }
+  }
+}

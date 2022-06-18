@@ -1,0 +1,147 @@
+// .add-new-btn-admin span{
+//     font-size: 14px;
+//     padding-left: 15px;
+// }
+
+.add-new-btn-admin {
+    margin-bottom: 30px;
+  }
+  
+  .datalistAdmin .filter-section input {
+    border-radius: 5px !important;
+    height: 46px;
+    border-radius: 10px !important;
+    margin-right: 15px;
+  }
+  
+  .rp-manage-school-header-title {
+    color: #454c4e;
+    //   font-family: Avenir;
+    font-size: 28px;
+    font-weight: Bold;
+    letter-spacing: 0;
+    line-height: 36px;
+  }
+  
+  .AdminTotal-users {
+    text-align: right;
+  }
+  
+  .adminInformation {
+    font-size: 16px;
+    color: #20282a;
+    line-height: 22px;
+  }
+  
+  .totalusersAdmin {
+    text-align: right;
+    width: 100%;
+    float: right;
+    h4 {
+      margin-right: 15px;
+    }
+    h2,
+    h4 {
+      display: inline-block;
+    }
+  }
+  
+  .rp-manageSchool-head .sort-dropdown {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px !important;
+    border: 1pt solid #454c4e !important;
+  }
+  
+  .rp-manageSchool-head-main {
+    width: 100%;
+    // justify-content: space-around;
+  }
+  
+  .rp-manageSchool-head {
+    width: 23%;
+  }
+  
+  .adminfilterSpan {
+    color: #20282a;
+    font-size: 16px;
+  }
+  
+  .custom-filtersection input {
+    color: #20282a;
+    font-size: 16px;
+    border-radius: 10px !important;
+    border: 1pt solid #454c4e !important;
+    max-width: 250px !important;
+  }
+  
+  .dropdown .customadmindropdown {
+    transform: translate3d(5px, 47px, 0px) !important;
+    min-width: 15rem !important;
+  }
+  
+  .dropdown .customadmindropdown .dropdown-item {
+    font-size: 15px;
+    color: #20282a;
+  }
+  
+  .rp-manage-schools-main
+    > div
+    > div
+    > div
+    > div
+    > div
+    > .rdt_TableCol
+    > div
+    > div {
+    color: #20282a;
+    // font-family: Avenir;
+    font-size: 16px;
+    font-weight: 900;
+    letter-spacing: 0;
+    line-height: 16px;
+  }
+  
+  .rp-manage-schools-main .rdt_Table .rdt_TableBody .rdt_TableRow {
+    min-height: 60px;
+  }
+  
+  .admindatarow {
+    font-size: 15px;
+    color: #20282a;
+  }
+  
+  .admindata-details-row {
+    font-size: 15px;
+  }
+  
+  .badge-active {
+    color: #28c76f;
+    display: flex;
+  }
+  
+  .badge-active .badge-dot-active {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #28c76f;
+    position: relative;
+    top: 4px;
+    margin-right: 5px;
+  }
+  
+  .badge-leave {
+    color: orange;
+  }
+  
+  .badge-active .badge-dot-leave {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: orange;
+    position: relative;
+    top: 4px;
+    margin-right: 5px;
+  }
+  

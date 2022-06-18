@@ -1,0 +1,14 @@
+.add-popup {
+    top: 30%;
+    .modal-body, .modal-footer {
+      text-align: center;
+      justify-content: center;
+    }
+    .modal-body {
+        padding: 15px;
+        line-height: 1.5;
+    }
+    .right-btn {
+        margin-left: 20px;
+    }
+  }

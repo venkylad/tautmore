@@ -1,0 +1,101 @@
+.basicInfo-heading {
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.basicinfo-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 1px solid darkgray;
+  //   background: red;
+  background: darkgray;
+  color: white;
+  width: 90px;
+  height: 90px;
+  margin-right: 0.75rem;
+}
+.basicinfo-profilediv {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.basicinfo-btndiv {
+  display: flex;
+  flex-direction: column;
+}
+.basicinfo-unsubscribebtn {
+  margin-bottom: 0.75rem;
+  font-weight: 700;
+}
+
+.basicinfo-deletebtn {
+  font-weight: 700;
+}
+.basicinfo-bottom {
+  background: white;
+  padding: 1.5rem;
+  input {
+    width: 100%;
+    height: 3rem;
+    margin-bottom: 1.5rem;
+  }
+  select {
+    width: 100%;
+    height: 3rem;
+    margin-bottom: 1.5rem;
+  }
+  .uniqueid-input {
+    width: 50%;
+    margin-right: 0.5rem;
+  }
+  span {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.3);
+    margin-left: 0.6rem;
+  }
+  p {
+    margin: 0;
+    font-weight: 700;
+  }
+}
+
+.basic-musicbtn {
+  //   background: white;
+  border-radius: 18px;
+  //   border: 1px solid darkgrey;
+  border: none;
+  outline: none;
+  padding: 6px 10px;
+}
+
+.basicinfo-updatebtn {
+  font-weight: 700;
+}
+
+.basicinfo-plusbtn {
+  height: 3rem;
+  width: 3rem;
+  color: darkgray;
+  background: transparent;
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  //   border: none;
+}
+.basicinfo-minusbtn {
+  height: 3rem;
+  width: 3rem;
+  color: darkgray;
+  background: transparent;
+  border: 2px solid rgba(0, 0, 0, 0.3);
+}
+
+.coursedetail-wrapper {
+  //   margin: 2rem 0rem;
+  h4 {
+    margin-bottom: 1.5rem;
+  }
+}

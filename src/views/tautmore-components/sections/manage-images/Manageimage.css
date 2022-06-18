@@ -1,0 +1,94 @@
+.manage-image-main h4 {
+  color: #454C4E;
+  font-size: 28px;
+  font-weight: Bold;
+  letter-spacing: 0;
+  line-height: 36px;
+}
+
+.manage-image-main .manage-image {
+  background-color: #D9E0EE;
+  width: 100%;
+  margin: auto;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.manage-image-main .manage-image h5 {
+  color: #454C4E;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.manage-image-main .manage-image p {
+  font-size: 12px;
+}
+
+.manage-image-main .manage-image .manage-image-sub {
+  background-color: #EBEFF9;
+  padding: 15px;
+  border-radius: 10px;
+  border: 2px dotted #ddd;
+}
+
+.manage-image-main .manage-image .manage-image-sub button {
+  background-color: #fff;
+  border: 0;
+  border-radius: 5px;
+  height: 40px;
+  padding: 0px 20px;
+  color: #454C4E;
+  font-weight: bold;
+}
+
+.manage-image-main .manage-image .manage-image-sub button svg {
+  fill: #fff;
+  margin-right: 10px;
+}
+
+.manage-image-main .manage-image .manage-image-sub .upload-image {
+  background-color: #fff;
+  margin-top: 20px;
+  padding: 10px 0px;
+}
+
+.manage-image-main .manage-image .manage-image-sub .upload-image .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+
+.manage-image-main .manage-image .manage-image-sub .upload-image img {
+  height: 35px;
+  width: 35px;
+}
+
+.manage-image-main .manage-image .manage-image-sub .upload-image svg {
+  cursor: pointer;
+}
+
+.manage-image-main .manage-image .manage-image-sub .upload-image #imgCanvas {
+  height: 0;
+  width: 0;
+}
+
+.manage-image-main .copy-icon {
+  margin-right: 15px;
+}
+
+@media only screen and (max-width: 575px) {
+  .manage-image-main .manage-image .upload-image {
+    padding: 15px;
+    height: auto !important;
+  }
+  .manage-image-main .manage-image .upload-image .upload-image-middle {
+    margin: 15px 0px;
+  }
+}
+/*# sourceMappingURL=Manageimage.css.map */

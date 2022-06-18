@@ -1,0 +1,69 @@
+.assign-header .close {
+  margin: 0;
+}
+.assign-modal .assign-header {
+  // background: transparent;
+  background-color: transparent;
+
+  .modal-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+  }
+  .close {
+    transform: none;
+    box-shadow: none;
+  }
+  .close span {
+    color: grey;
+    font-weight: 500;
+    font-size: 3rem;
+  }
+  .close:active {
+    transform: none;
+  }
+}
+.assign-modal .assign-header .close:hover,
+.assign-modal .assign-header .close:focus,
+.assign-modal .assign-header .close:active {
+  transform: none;
+}
+.assign-footer {
+  justify-content: center;
+  border: none;
+  margin-top: 2rem;
+  margin-bottom: 1.2rem;
+}
+
+.modalmain {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.modal-row {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+.number-input {
+  width: 185px;
+  padding: 8px;
+}
+#subject {
+  width: 185px;
+  height: 40px;
+  // padding: 8px;
+}
+.react-datepicker__input-container {
+  input {
+    height: 40px;
+  }
+}
+.modal-content {
+  border-radius: 0px;
+}

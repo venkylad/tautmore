@@ -1,0 +1,225 @@
+.rp-manage-school-header-title {
+    color: #454c4e;
+    //   font-family: Avenir;
+    font-size: 28px;
+    font-weight: Bold;
+    letter-spacing: 0;
+    line-height: 36px;
+  }
+
+  .teacher-total {
+    text-align: right;
+    .total-count {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      margin-right: 0 !important;
+      justify-content: flex-end;
+      h4 {
+        display: flex;
+        align-items: center;
+        margin-bottom: 5px;
+        color: #454c4e;
+        //   font-family: Avenir;
+        font-size: 28px;
+        font-weight: 900;
+        letter-spacing: 0;
+        line-height: 36px;
+      }
+      h2 {
+        font-size: 20px;
+        font-weight: 700;
+      }
+    }
+  }
+
+
+.classesTab .nav-link{
+    font-weight: 500 !important;
+    font-size: 24px !important;
+    color: #20282a !important;
+}
+
+.classesTab li{
+    width: 18% !important;
+    text-align: center;
+}
+
+.customTimings{
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.admindatarow {
+  font-size: 15px;
+  color: #20282a;
+}
+
+.customTimings span{
+  color: #0000FF;
+}
+
+.customChapter{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.customChapter span{
+  color: #c5bebe;
+}
+
+.datalistClasses .classesfilter-section input{
+  border-radius: 5px !important;
+  height: 46px;
+  border-radius: 10px !important;
+  margin-right: 15px;
+}
+
+.datalistClasses{
+  margin: 40px 0 30px 0;
+}
+
+.rp-manageSchool-head-Classes {
+  width: 23%;
+}
+
+.rp-manageSchool-head-main-Classes {
+  width: 100%;
+  justify-content: flex-end !important;
+}
+
+.rp-manageSchool-head-Classes .sort-dropdown {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 10px !important;
+  border: 1pt solid #454c4e !important;
+  background-color: #fff;
+  padding: 1.02rem 0.65rem !important;
+}
+
+.adminfilterdisSpan {
+  color: #20282a;
+  font-size: 16px;
+}
+
+.dropdown .customadmindropdownClasses .dropdown-item {
+  font-size: 15px;
+  color: #20282a;
+}
+
+.dropdown .customadmindropdownClasses {
+  transform: translate3d(5px, 47px, 0px) !important;
+  min-width: 15rem !important;
+}
+
+.datalistClasses .classesfilter-section input{
+  border-radius: 5px !important;
+  height: 46px;
+  border-radius: 10px !important;
+  margin-right: 15px;
+}
+
+.customClass-filtersection input {
+  color: #20282a;
+  font-size: 16px;
+  border-radius: 10px !important;
+  border: 1pt solid #454c4e !important;
+  max-width: 250px !important;
+}
+
+
+.search-icon-and-search-bar{
+    display: none;
+  }
+
+
+.rp-manage-school_error-message {
+  color: #f70808;
+  /* // font-family: Avenir; */
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 19px;
+}
+
+.tautmore-input-style {
+  /* // border-radius: 10px !important;
+  // border: 1pt solid #454C4E !important; */
+  color: #20282a;
+  font-size: 15px;
+}
+
+.rp-manageSchool-head-main-batchDet{
+  width: 100%;
+}
+
+.tautmore-manage-school_submit{
+  border:1pt solid #8aa099 !important;
+background: #43AA8B !important;
+}
+
+// .courseDateFilter{
+//   display: flex;
+//   justify-content: space-around;
+// }
+
+.rp-manage-school-input-title {
+  color: #20282a;
+  font-size: 15px;
+  font-weight: 900;
+  letter-spacing: 0;
+  line-height: 30px;
+}
+
+.customLabelCheck Label{
+  font-weight: bold;
+}
+.batch-details-main {
+  .time-table {
+    .card-header {
+      h3 {
+        text-transform: capitalize;
+      }
+    }
+    
+  }
+  .time-table {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-column-gap: 20px;
+    width: 100%;
+    margin: auto;
+    .time-table-sub {
+      width: 100%;
+      height: auto !important;
+      display: grid;
+    }
+  }
+}
+.batch-detail-table {
+  .rdt_TableRow {
+    .data-list-action {
+      a {
+        position: relative;
+        left: -10px;
+      }
+    }
+    div.rdt_TableCell:nth-child(7){
+      width: 300px;
+    }
+  }
+}
+.schedule-btn-part {
+  .data-list-sidebar-footer {
+    height: 100%;
+    align-items: center !important;
+    margin-top: 4px !important;
+    .btn-secondary {
+      margin-right: 10px;
+    }
+  }
+}

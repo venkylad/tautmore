@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AACE,UADQ,CACR,YAAY,CAAC;EACX,OAAO,EAAE,IAAI;CACd;;AAMH,AAEI,UAFM,CACR,UAAU,CACR,aAAa,CAAC;EACZ,KAAK,EAAE,KAAK;CACb",
+    "sources": [
+        "teacherDetails.scss"
+    ],
+    "names": [],
+    "file": "teacherDetails.css"
+}

@@ -1,0 +1,129 @@
+.lisiting-image div {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  width: 100px;
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid darkgray;
+  border-radius: 50%;
+}
+
+.listing-viewbtn {
+  width: 145px;
+  border: 1pt solid #8aa099 !important;
+  background: #43aa8b !important;
+}
+
+.listing-editbtn {
+  width: 145px;
+  background: white;
+}
+
+.listing-editbtn:focus {
+  background: white;
+}
+
+.listing-editbtn:hover {
+  background: white;
+}
+
+.outerprogress-completion {
+  width: 100%;
+  height: 0.8rem;
+  background: white;
+  border-radius: 10px;
+  position: relative;
+}
+
+.innerprogress-completion {
+  position: absolute;
+  width: 70%;
+  border-radius: 10px;
+  height: 0.8rem;
+  background: #7367f0;
+}
+
+.outerprogress-perform {
+  width: 100%;
+  height: 0.8rem;
+  background: white;
+  border-radius: 10px;
+  position: relative;
+}
+
+.innerprogress-perform {
+  position: absolute;
+  width: 50%;
+  border-radius: 10px;
+  height: 0.8rem;
+  background: yellow;
+}
+
+.syllabus-percent {
+  color: #7367f0;
+}
+
+.average-progress {
+  color: #7367f0;
+}
+
+.listing-bottom {
+  margin-top: 2rem;
+  border: 1px solid black;
+  padding: 0.8rem;
+  margin-bottom: 20px;
+}
+
+.lisitingview-body {
+  height: 95%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.lisitingview-body::-webkit-scrollbar {
+  display: none;
+  width: 0;
+}
+
+.lisitingview-body::-webkit-scrollbar-thumb {
+  display: none;
+  width: 0;
+}
+
+.lisitingview-body::-webkit-scrollbar-track {
+  display: none;
+  width: 0;
+}
+
+.performance-heading {
+  margin-top: 0.75rem;
+}
+
+.performance-heading h4 {
+  font-weight: 700;
+}
+
+.detaillist-heading {
+  margin-top: 1rem;
+}
+
+.detaillist-heading h4 {
+  font-weight: 700;
+}
+
+.detailstudent-answer h5 {
+  font-weight: 700;
+}
+
+.detailstudent-answer p {
+  font-weight: 700;
+}
+/*# sourceMappingURL=listingViewDetail.css.map */

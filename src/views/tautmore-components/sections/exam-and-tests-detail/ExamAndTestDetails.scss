@@ -1,0 +1,391 @@
+.rp-manage-school-header-title {
+    color: #454c4e;
+    font-size: 28px;
+    font-weight: Bold;
+    letter-spacing: 0;
+    line-height: 36px;
+  }
+
+.examQuestDeatails{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.examQuestDeatails label {
+    font-size: 18px;
+    font-weight: 500;
+    position: relative;
+    top: 3px;
+    padding-left: 10px;;
+}
+
+.admin-details-edit{
+    font-size: 16px;
+    border:1pt solid #8aa099 !important;
+    background: #43AA8B !important;
+    color: #fff;
+    /* font-weight: 700; */
+    width: 100px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    text-align: center;
+    padding: 12px 0px !important;
+    float: right;
+}
+
+.admin-details-addQuest{
+    font-size: 16px;
+    border:1pt solid #8aa099 !important;
+    background: #43AA8B !important;
+    color: #fff;
+    /* font-weight: 700; */
+    width: 200px;
+    margin-bottom: 10px;
+    text-align: center;
+    padding: 12px 0px !important;
+    /* float: right; */
+}
+
+.examDelEdit{
+    font-size: 16px;
+    border:1pt solid #8aa099 !important;
+    background: #43AA8B !important;
+    color: #fff;
+    /* font-weight: 700; */
+    width: 180px;
+    margin-bottom: 10px;
+    text-align: center;
+    padding: 12px 0px !important;
+    margin-left: 20px;
+}
+
+.rp-manage-schools-main
+  > div
+  > div
+  > div
+  > div
+  > div
+  > .rdt_TableCol
+  > div
+  > div {
+  color: #20282a;
+  /* // font-family: Avenir; */
+  font-size: 16px;
+  font-weight: 900;
+  letter-spacing: 0;
+  line-height: 16px;
+}
+
+.rp-manage-schools-main .rdt_Table .rdt_TableBody .rdt_TableRow {
+  min-height: 60px;
+}
+
+
+.datalistAdmin .filter-section input {
+    border-radius: 5px !important;
+  }
+
+  .datalistExamQuestion {
+      float: right;
+  }
+
+  .custom-filtersection input {
+    color: #20282a;
+    font-size: 16px;
+    border-radius: 10px !important;
+    border: 1pt solid #454c4e !important;
+    max-width: 250px !important;
+    margin-bottom: 25px;;
+  }
+
+.examQuestionEditDele{
+    position: absolute;
+    bottom: -5px;
+    right: 20px;
+}
+
+.tautmore-admin-add-btn{
+    margin:0 10px;
+    color: #fff;
+    font-size: 16px;
+  }
+
+.custom-switch-dark-cust{
+    float: right;
+}
+
+.custom-switch-dark {
+    top: 3px;
+}
+
+.examAndQueUpdateCan{
+  float: right;
+  margin-top: 25px;
+}
+
+.custom-switch-dark-cust span{
+    font-size: 18px;
+    font-weight: 500;
+    padding-right: 10px;
+}
+
+.examsAndTestTabInside .nav-link{
+    font-weight: 500 !important;
+    font-size: 24px !important;
+    color: #20282a !important;
+}
+
+/* .examsAndTestTabInside {
+    width: 35% !important;
+} */
+
+.examsAndTestTabInside li{
+  width: 18%;
+  text-align: center;
+}
+
+.MainLayoutExamDet{
+    background-color: #fff;
+    padding: 50px;
+    margin-top: 50px;
+}
+
+.ExamDetInfoMD{
+    margin-bottom: 30px;
+}
+
+.ExamDetInfoD{
+    margin-bottom: 30px;
+}
+
+.ExamDetInfoD p{
+    font-size: 16px;
+    line-height: 26px;
+}
+
+.ExamDetInfoI li{
+    font-size: 16px;
+    line-height: 26px;
+}
+
+.ExamDetInfoI ul{
+    padding-left: 0px;
+    list-style-type: none;
+    
+}
+
+.ExamDetInfoI  ul > li:before {
+    content: "-";
+    text-indent: -5px;
+    font-size: 25px;
+    padding-right: 5px;;
+  }
+
+.examandTestCollapseBA::before{
+    display: none;
+}
+
+.examandTestCollapseBA::after{
+    display: none;
+}
+
+.questAccordion{
+    width: 95%;
+    display: flex;
+}
+
+.question_l {
+    margin: 6px 0px;
+  }
+
+  .list-group-item-success {
+    border-radius: inherit;
+    border-color: #43aa8b !important;
+    background: #43aa8b !important;
+    color: #fff;
+  }
+
+.questExamAccorBorder{
+    border-top: 1pt solid #000;
+    padding-left: 30px !important;
+}
+
+.data-list-viewDetails{
+    display: flex;
+    align-items: center;
+}
+
+.data-list-viewDetails .vx-checkbox-success{
+    padding-left: 10px;
+}
+
+.datalistAdmin .filter-section input {
+    border-radius: 5px !important;
+    height: 46px;
+    border-radius: 10px !important;
+    margin-right: 15px;
+  }
+
+.queExamSearch .filter-section input{
+  border-radius: 5px !important;
+    height: 46px;
+    border-radius: 10px !important;
+    margin-right: 15px;
+}
+
+.admin-details-delete{
+  font-size: 16px;
+  /* background-color: #1e1e1e; */
+  border-color: #1e1e1e !important;
+  color: #1e1e1e !important;
+  /* font-weight: 700; */
+  width: 100px;
+  text-align: center;
+  padding: 12px 0px !important;
+  margin-right: 15px;
+}
+.admin-details-delete.back {
+  margin-right: 0;
+  float: right;
+}
+  
+  .rp-manageSchool-head-main {
+    width: 100%;
+    /* justify-content: flex-end !important; */
+  }
+  
+  .datalistAdmin{
+    margin: 40px 0 30px 0;
+    /* justify-content: flex-end !important; */
+  }
+  
+  /* .rp-manageSchool-head .sort-dropdown {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px !important;
+    border: 1pt solid #454c4e !important;
+  } */
+  
+  
+  .rp-manageSchool-head {
+    width: 23%;
+  }
+  
+  .dropdown .customadmindropdown {
+    transform: translate3d(5px, 47px, 0px) !important;
+    min-width: 15rem !important;
+  }
+  
+  .adminfilterSpan {
+    color: #20282a;
+    font-size: 16px;
+  }
+
+  .examQuestLayout{
+    margin-top: 50px;;
+  }
+  
+  .rp-manageSchool-head .sort-dropdown {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px !important;
+    border: 1pt solid #454c4e !important;
+    background-color: #fff;
+    padding: 1.02rem 0.65rem !important;
+  }
+  
+  .dropdown .customadmindropdown .dropdown-item {
+    font-size: 15px;
+    color: #20282a;
+  }
+
+  .examInner-nav-bottom-border {
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background-color: black;
+    bottom: 0px;
+  }
+
+  .subjectNameHead{
+    border-radius: 10px;
+    background: #fff;
+    padding: 12px;
+    margin-right: 15px;
+  }
+
+  .rp-manageSchool-head {
+    width: 23%;
+    margin-bottom: 15px;
+  
+    .subconcept-select {
+      .select__control {
+        padding: 0.85rem 0.65rem !important;
+        border-radius: 10px !important;
+        border: 1pt solid #454c4e !important;
+        box-shadow: none !important;
+        cursor: pointer;
+        .select__value-container {
+          padding: 0 !important;
+          .css-b8ldur-Input {
+            margin: 0 !important;
+            padding: 0 !important;
+          }
+        }
+        .select__indicators {
+          .select__indicator-separator {
+            margin: 0 !important;
+            padding: 0 !important;
+            height: 0 !important;
+            width: 0 !important;
+          }
+          .select__dropdown-indicator {
+            padding: 0 !important;
+            svg {
+              fill: #626262;
+              height: 16px;
+              width: 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .questionHtlm {
+    .questionHtlm-left {
+      display: inline-block;
+      width: 25%;
+      vertical-align: middle;
+    }
+    .questionHtlm-right {
+      display: inline-block;
+      width: 65%;
+      vertical-align: middle;
+      span {
+        word-break: break-all;
+      }
+      p {
+        margin-bottom: 0;
+      }
+      ul {
+        padding-left: 0;
+      }
+      li {
+        list-style-type: none;
+      }
+    }
+  }
+
+.examMarksData{
+  display: flex;
+  justify-content: space-around;
+}
+
+.examMarksData h3{
+  text-align: center;
+}
+  

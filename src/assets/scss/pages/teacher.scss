@@ -1,0 +1,318 @@
+.teacher-heading {
+  h4 {
+    color: #454c4e;
+    //   font-family: Avenir;
+    font-size: 28px;
+    font-weight: Bold;
+    letter-spacing: 0;
+    line-height: 36px;
+  }
+  p {
+    color: #454c4e;
+    //   font-family: Avenir;
+    font-size: 15px;
+    font-weight: Bold;
+    letter-spacing: 0;
+  }
+}
+
+.teacher-total {
+  text-align: right;
+  .total-count {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-right: 0 !important;
+    justify-content: flex-end;
+    h4 {
+      display: flex;
+      align-items: center;
+      margin-bottom: 5px;
+      color: #454c4e;
+      //   font-family: Avenir;
+      font-size: 28px;
+      font-weight: 900;
+      letter-spacing: 0;
+      line-height: 36px;
+    }
+    h2 {
+      font-size: 20px;
+      font-weight: 700;
+    }
+  }
+}
+
+.new-teacher-btn {
+  border: 1pt solid #8aa099 !important;
+  background: #43aa8b !important;
+  width: max-content;
+  color: white;
+  font-size: 1rem;
+
+  // padding-left: 1rem !important;
+  // padding-right: 1rem !important;
+  font-weight: 800;
+  &:hover {
+    color: white;
+    box-shadow: 0 8px 25px -8px #b8c2cc;
+  }
+  .add-new-icon {
+    margin-right: 10px;
+  }
+}
+
+.teacher-navs {
+  position: relative;
+  .teacher-nav-bottom-border {
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background-color: black;
+    bottom: 0px;
+  }
+  .teacher-nav-item {
+    .teacher-nav-link {
+      padding: 0;
+      font-size: 16px !important;
+      margin-right: 30px;
+    }
+    .teacher-nav-link.active {
+      border-bottom: 5px solid #7367f0 !important;
+      background-color: transparent !important;
+      transform: none !important;
+      transition: none !important;
+      font-weight: 600 !important;
+    }
+  }
+}
+
+.teacher-search {
+  input {
+    position: relative;
+    padding: 1rem 0.5rem 1rem 3rem;
+    display: flex;
+    align-items: center;
+    width: 40%;
+    font-weight: 600;
+    font-size: 18px;
+    border-radius: 2px;
+    border: 2px solid rgba(0, 0, 0, 0.3);
+  }
+  input::placeholder {
+    color: rgba(0, 0, 0, 0.3);
+  }
+  .search-icon {
+    position: absolute;
+    top: 50%;
+    left: 3%;
+    transform: translateY(-50%);
+  }
+}
+
+.teacher-extra-search {
+  select {
+    position: relative;
+    padding: 1rem 0.5rem 1rem 0.5rem;
+    width: 100%;
+    font-weight: 900;
+    font-size: 18px;
+    background: none;
+    border: none;
+    outline: none;
+  }
+}
+
+.rp-manage-schools-main
+  > div
+  > div
+  > div
+  > div
+  > div
+  > .rdt_TableCol
+  > div
+  > div {
+  color: #20282a;
+  // font-family: Avenir;
+  font-size: 16px;
+  font-weight: 900;
+  letter-spacing: 0;
+  line-height: 16px;
+}
+
+.rp-manage-schools-main .rdt_Table .rdt_TableBody .rdt_TableRow {
+  min-height: 60px;
+}
+
+.teacher-table-container {
+  margin-top: 2rem;
+  .rdt_TableHeader {
+    display: none;
+  }
+  .rdt_Table {
+    background-color: transparent !important;
+    .rdt_TableHead {
+      .rdt_TableHeadRow {
+        background-color: transparent;
+        .rdt_TableCol {
+          text-transform: uppercase;
+          font-size: 16px;
+          color: rgba(0, 0, 0, 0.4);
+          font-weight: 600;
+        }
+        & > :nth-child(1) {
+          div {
+            padding-left: 28px;
+          }
+        }
+      }
+    }
+    .rdt_TableBody {
+      .rdt_TableRow {
+        font-size: 15px;
+        color: #000;
+        font-weight: 900 !important;
+        cursor: pointer;
+        .rdt_TableCell {
+          font-weight: 900 !important;
+        }
+        &:hover {
+          background-color: #fff;
+        }
+      }
+    }
+    .rdt_TableCol:first-child,
+    .rdt_TableCell:first-child {
+      flex: 0 0 200px !important;
+    }
+  }
+}
+
+.salary-table {
+  .rdt_Table {
+    .rdt_TableHead {
+      .rdt_TableHeadRow {
+        & > :nth-child(1) {
+          div {
+            padding-left: 0px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.teacher-id {
+  display: flex;
+  align-items: center;
+  .teacher-icon {
+    margin: 0px 20px 0px 10px;
+  }
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  .status-indicator {
+    height: 15px;
+    width: 15px;
+    background-color: green;
+    margin-right: 10px;
+    border-radius: 50%;
+    // border: 1px solid #000;
+  }
+  .status-indicator.leave {
+    background-color: #e78439;
+  }
+}
+
+.status-extra-text {
+  color: rgba(0, 0, 0, 0.4) !important;
+}
+
+.pagination-active {
+  li {
+    a {
+      padding: 0.5rem 0.9rem;
+    }
+  }
+  li.active {
+    a {
+      border-radius: 50% !important;
+    }
+  }
+}
+
+// TeacherDetails SCSS
+
+.teacher-salary-details {
+  color: #d1455b !important;
+  font-weight: 900 !important;
+  font-size: 22px !important;
+  margin-top: 30px !important;
+}
+
+.teacher-details-status {
+  margin-left: 40px;
+  span {
+    font-size: 18px;
+  }
+}
+
+.salary-table {
+  .rdt_TableRow {
+    padding: 15px 0px;
+  }
+}
+
+.payment-status {
+  margin-bottom: 0;
+}
+
+.payment-status.Processing {
+  color: #da9d6f;
+}
+
+.payment-status.Credited {
+  color: #50867c;
+}
+
+.leave-status {
+  margin-bottom: 0;
+}
+
+.leave-status.pending {
+  color: #da9d6f;
+}
+
+.leave-status.approved {
+  color: #50867c;
+}
+
+.leave-status.rejected {
+  color: #c8a5a4;
+}
+
+.leave-no {
+  margin: 0px 30px 0px 10px !important;
+}
+
+.table-action {
+  button {
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    .approve-btn {
+      color: #227668;
+      // fill: #227668;
+    }
+    .reject-btn {
+      color: #d2455b;
+      // fill: #d2455b;
+    }
+  }
+}
+
+.list-button {
+  padding: 12px 8px;
+}

@@ -1,0 +1,26 @@
+.roleCreate-addbtn {
+  margin-bottom: 0.5rem;
+  button {
+    width: 130px;
+    font-weight: 700;
+  }
+}
+.roleCreate-cancelbtn {
+  button {
+    width: 130px;
+    background-color: white;
+    font-weight: 700;
+  }
+}
+
+.roleCreaction-subHeading {
+  font-weight: 700;
+}
+.switchline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.switch-wrapper {
+  padding: 1.25rem;
+}

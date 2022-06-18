@@ -1,0 +1,31 @@
+.modal-row {
+  .asign-class {
+    display: none;
+  }
+}
+
+.assign-modal {
+}
+
+.modalmain {
+  .modal-row {
+    .assign-class {
+      width: 180px;
+    }
+  }
+}
+.detail-bottom {
+  .day-time {
+    .detail-content {
+      font-size: 15px;
+    }
+  }
+}
+.leave-history-table {
+  .teacher-table-container .rdt_Table .rdt_TableCol:first-child, .teacher-table-container .rdt_Table .rdt_TableCell:first-child {
+    flex: 0 0 340px !important;
+  }
+  .teacher-table-container .rdt_Table .rdt_TableCol:nth-of-type(2), .teacher-table-container .rdt_Table .rdt_TableCell:nth-of-type(2) {
+    flex: 0 0 350px !important;
+  }
+}

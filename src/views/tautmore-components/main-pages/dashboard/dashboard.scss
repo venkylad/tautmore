@@ -1,0 +1,110 @@
+.PaymentsTotalStu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.rp-manage-school-header-title {
+    color: #454c4e;
+    //   font-family: Avenir;
+    font-size: 28px;
+    font-weight: Bold;
+    letter-spacing: 0;
+    line-height: 36px;
+  }
+
+.dashbaordStudents{
+    margin-bottom: 30px;
+}
+
+.barChartCard{
+    height: 350px;
+}
+
+.recharts-responsive-container{
+    height: 250px !important;
+}
+
+.teachersCount{
+    margin-bottom: 27px;;
+}
+
+.badge-active {
+    color: #28c76f;
+    display: flex;
+  }
+  
+  .badge-active .badge-dot-active {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #28c76f;
+    position: relative;
+    top: 4px;
+    margin-right: 5px;
+  }
+  
+  .badge-leave {
+    color:orange;
+    display: flex;
+  }
+  
+  .badge-leave .badge-dot-leave {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: orange;
+    position: relative;
+    top: 4px;
+    margin-right: 5px;
+  }
+
+  .rp-manageSchool-head-dashboard {
+    width: 33%;
+  }
+
+  .rp-manageSchool-head-dashboardd{
+      width: 50%;
+  }
+
+  .rp-manageSchool-head-main-dashboard {
+    width: 100%;
+    justify-content: flex-end !important;
+  }
+
+  .rp-manageSchool-head-dashboard .sort-dropdown {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px !important;
+    border: 1pt solid #454c4e !important;
+    background-color: #fff;
+    padding: 1.02rem 0.65rem !important;
+  }
+
+  .rp-manageSchool-head-dashboardd .sort-dropdown {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px !important;
+    border: 1pt solid #454c4e !important;
+    background-color: #fff;
+    padding: 1.02rem 0.65rem !important;
+  }
+  
+  
+  .adminfilterdisSpan {
+    color: #20282a;
+    font-size: 16px;
+  }
+  
+  .dropdown .customadmindropdowndashboard .dropdown-item {
+    font-size: 15px;
+    color: #20282a;
+  }
+  
+  .dropdown .customadmindropdowndashboard {
+    transform: translate3d(5px, 47px, 0px) !important;
+    min-width: 15rem !important;
+  }

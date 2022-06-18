@@ -1,0 +1,95 @@
+.assign-header .close {
+  margin: 0;
+}
+
+.assign-modal .assign-header {
+  background-color: transparent;
+}
+
+.assign-modal .assign-header .modal-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.assign-modal .assign-header .close {
+  -webkit-transform: none;
+          transform: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.assign-modal .assign-header .close span {
+  color: grey;
+  font-weight: 500;
+  font-size: 3rem;
+}
+
+.assign-modal .assign-header .close:active {
+  -webkit-transform: none;
+          transform: none;
+}
+
+.assign-modal .assign-header .close:hover,
+.assign-modal .assign-header .close:focus,
+.assign-modal .assign-header .close:active {
+  -webkit-transform: none;
+          transform: none;
+}
+
+.assign-footer {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: none;
+  margin-top: 2rem;
+  margin-bottom: 1.2rem;
+}
+
+.modalmain {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.modal-row {
+  margin-top: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.number-input {
+  width: 185px;
+  padding: 8px;
+}
+
+#subject {
+  width: 185px;
+  height: 40px;
+}
+
+.react-datepicker__input-container input {
+  height: 40px;
+}
+
+.modal-content {
+  border-radius: 0px;
+}
+/*# sourceMappingURL=assignModal.css.map */

@@ -1,0 +1,274 @@
+.rp-manage-school-header-title {
+    color: #454c4e;
+    //   font-family: Avenir;
+    font-size: 28px;
+    font-weight: Bold;
+    letter-spacing: 0;
+    line-height: 36px;
+  }
+
+  .teacher-total {
+    text-align: right;
+    .total-count {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      margin-right: 0 !important;
+      justify-content: flex-end;
+      h4 {
+        display: flex;
+        align-items: center;
+        margin-bottom: 5px;
+        color: #454c4e;
+        //   font-family: Avenir;
+        font-size: 28px;
+        font-weight: 900;
+        letter-spacing: 0;
+        line-height: 36px;
+      }
+      h2 {
+        font-size: 20px;
+        font-weight: 700;
+      }
+    }
+  }
+
+
+.classesTab .nav-link{
+    font-weight: 500 !important;
+    font-size: 24px !important;
+    color: #20282a !important;
+}
+
+.classesTab li{
+    width: 18% !important;
+    text-align: center;
+}
+
+.customTimings{
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.admindatarow {
+  font-size: 15px;
+  color: #20282a;
+}
+
+.customTimings span{
+  color: #0000FF;
+}
+
+.customChapter{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.customChapter span{
+  color: #c5bebe;
+}
+
+.datalistClasses .classesfilter-section input{
+  border-radius: 5px !important;
+  height: 46px;
+  border-radius: 10px !important;
+  margin-right: 15px;
+}
+
+.datalistClasses{
+  margin: 40px 0 30px 0;
+}
+
+.rp-manageSchool-head-Classes {
+  width: 23%;
+}
+
+.rp-manageSchool-head-main-Classes {
+  width: 100%;
+  justify-content: flex-end !important;
+}
+
+.rp-manageSchool-head-Classes .sort-dropdown {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 10px !important;
+  border: 1pt solid #454c4e !important;
+  background-color: #fff;
+  padding: 1.02rem 0.65rem !important;
+}
+
+.adminfilterdisSpan {
+  color: #20282a;
+  font-size: 16px;
+}
+
+.dropdown .customadmindropdownClasses .dropdown-item {
+  font-size: 15px;
+  color: #20282a;
+}
+
+.dropdown .customadmindropdownClasses {
+  transform: translate3d(5px, 47px, 0px) !important;
+  min-width: 15rem !important;
+}
+
+.datalistClasses .classesfilter-section input{
+  border-radius: 5px !important;
+  height: 46px;
+  border-radius: 10px !important;
+  margin-right: 15px;
+}
+
+.customClass-filtersection input {
+  color: #20282a;
+  font-size: 16px;
+  border-radius: 10px !important;
+  border: 1pt solid #454c4e !important;
+  max-width: 250px !important;
+}
+
+.rp-manage-school_error-message {
+  color: #f70808;
+  /* // font-family: Avenir; */
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 19px;
+}
+
+.tautmore-input-style {
+  /* // border-radius: 10px !important;
+  // border: 1pt solid #454C4E !important; */
+  color: #20282a;
+  font-size: 15px;
+}
+
+.rp-manageSchool-head-main-batchDet{
+  width: 100%;
+}
+
+.tautmore-manage-school_submit{
+  border:1pt solid #8aa099 !important;
+background: #43AA8B !important;
+}
+
+// .courseDateFilter{
+//   display: flex;
+//   justify-content: space-around;
+// }
+
+.rp-manage-school-input-title {
+  color: #20282a;
+  font-size: 15px;
+  font-weight: 900;
+  letter-spacing: 0;
+  line-height: 30px;
+}
+
+.customLabelCheck Label{
+  font-weight: bold;
+}
+
+.rp-manageSchool-head {
+  width: 23%;
+  margin-bottom: 15px;
+
+  .subconcept-select {
+    .select__control {
+      padding: 0.85rem 0.65rem !important;
+      border-radius: 10px !important;
+      border: 1pt solid #454c4e !important;
+      box-shadow: none !important;
+      cursor: pointer;
+      .select__value-container {
+        padding: 0 !important;
+        .css-b8ldur-Input {
+          margin: 0 !important;
+          padding: 0 !important;
+        }
+      }
+      .select__indicators {
+        .select__indicator-separator {
+          margin: 0 !important;
+          padding: 0 !important;
+          height: 0 !important;
+          width: 0 !important;
+        }
+        .select__dropdown-indicator {
+          padding: 0 !important;
+          svg {
+            fill: #626262;
+            height: 16px;
+            width: 16px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.batch-details-main {
+  .time-table {
+    .card-header {
+      h3 {
+        text-transform: capitalize;
+      }
+    }
+    
+  }
+  .time-table {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-column-gap: 20px;
+    width: 100%;
+    margin: auto;
+    .time-table-sub {
+      width: 100%;
+      height: auto !important;
+      display: grid;
+    }
+  }
+}
+
+.delete-popup {
+  top: 25%;
+  text-align: center;
+}
+
+.delete-popup .modal-footer {
+  -webkit-box-pack: center !important;
+      -ms-flex-pack: center !important;
+          justify-content: center !important;
+}
+
+.delete-popup .modal-footer button {
+  font-weight: 900;
+}
+
+.delete-popup .modal-footer button.btn-secondary {
+  background-color: #1c1c1c !important;
+}
+
+.delete-popup .modal-content {
+  min-height: 150px;
+  border-radius: 10px;
+}
+
+.delete-popup .modal-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #20282a;
+  font-size: 19px;
+  font-weight: 900;
+}

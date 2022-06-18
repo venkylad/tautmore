@@ -1,0 +1,338 @@
+// .add-new-btn-admin span{
+//     font-size: 14px;
+//     padding-left: 15px;
+// }
+
+.add-new-btn-admin {
+  margin-bottom: 30px;
+}
+
+.datalistAdmin .filter-section input {
+  border-radius: 5px !important;
+}
+
+.rp-manage-school-header-title {
+  color: #454c4e;
+  //   font-family: Avenir;
+  font-size: 28px;
+  font-weight: Bold;
+  letter-spacing: 0;
+  line-height: 36px;
+}
+
+.AdminTotal-users {
+  .totalusersAdmin {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-right: 0 !important;
+    justify-content: flex-end;
+    h2 {
+      display: inline-block;
+      margin-bottom: 0;
+    }
+    h4 {
+      display: inline-block;
+      margin-bottom: 0;
+      margin-right: 15px;
+    }
+  }
+}
+
+.adminInformation {
+  font-size: 16px;
+  color: #20282a;
+  line-height: 22px;
+}
+
+.totalusersAdmin {
+  text-align: center;
+  width: 40%;
+  float: right;
+  margin-right: 35px;
+}
+
+.rp-manageSchool-head .sort-dropdown {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 10px !important;
+  border: 1pt solid #454c4e !important;
+  background-color: #fff;
+  padding: 1.02rem 0.65rem !important;
+  line-height: 1.75;
+}
+
+div.rp-manageSchool-head-main.actions-right {
+  width: 100%;
+  justify-content: flex-start !important;
+  .data-list-rows-dropdown {
+    .customadmindropdown.dropdown-menu {
+      max-height: 150px;
+      overflow-y: scroll;
+      position: relative;
+      line-height: 1.45;
+    }
+  }
+}
+
+.rp-manageSchool-head.dropdown .customadmindropdown {
+  min-width: 100% !important;
+}
+
+.rp-manageSchool-head {
+  width: 23%;
+  margin-bottom: 15px;
+
+  .subconcept-select {
+    .select__control {
+      padding: 0.85rem 0.65rem !important;
+      border-radius: 10px !important;
+      border: 1pt solid #454c4e !important;
+      box-shadow: none !important;
+      cursor: pointer;
+      .select__value-container {
+        padding: 0 !important;
+        .css-b8ldur-Input {
+          margin: 0 !important;
+          padding: 0 !important;
+        }
+      }
+      .select__indicators {
+        .select__indicator-separator {
+          margin: 0 !important;
+          padding: 0 !important;
+          height: 0 !important;
+          width: 0 !important;
+        }
+        .select__dropdown-indicator {
+          padding: 0 !important;
+          svg {
+            fill: #626262;
+            height: 16px;
+            width: 16px;
+          }
+        }
+      }
+    }
+
+    .select__menu {
+      min-width: 100% !important;
+      //border: 0px solid rgba(0, 0, 0, 0.05) !important;
+      border-radius: 5px;
+      top: 0px;
+      left: 0px;
+      transform: translate3d(5px, 47px, 0px) !important;
+      right: auto;
+      div > div {
+        padding: 0.714rem 1.428rem;
+        cursor: pointer;
+        background-color: transparent !important;
+        font-size: 15px;
+        color: #20282a;
+      }
+      div > div:hover {
+        background-color: #f8f8f8 !important;
+        color: #7367f0;
+        line-height: 1.45;
+      }
+    }
+    .select__menu::before {
+      content: "";
+      position: absolute;
+      top: -1px;
+      width: 0.75rem;
+      height: 0.75rem;
+      display: block;
+      z-index: 10;
+      box-sizing: border-box;
+      background: #fff;
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
+      transform: rotate(45deg) translate(-7px);
+      border-left: 1px solid rgba(0, 0, 0, 0.1);
+      right: 0.6rem;
+      left: auto;
+    }
+  }
+}
+
+.adminfilterSpan {
+  color: #20282a;
+  font-size: 16px;
+}
+
+.custom-filtersection input {
+  color: #20282a;
+  font-size: 16px;
+  border-radius: 10px !important;
+  border: 1pt solid #454c4e !important;
+  max-width: 250px !important;
+}
+
+.dropdown .customadmindropdown {
+  transform: translate3d(5px, 47px, 0px) !important;
+  min-width: 15rem !important;
+  max-height: 150px;
+  overflow-y: scroll;
+}
+
+.dropdown .customadmindropdown .dropdown-item {
+  font-size: 15px;
+  color: #20282a;
+  width: 100% !important;
+  
+}
+
+
+.rp-manage-schools-main
+  > div
+  > div
+  > div
+  > div
+  > div
+  > .rdt_TableCol
+  > div
+  > div {
+  color: #20282a;
+  // font-family: Avenir;
+  font-size: 16px;
+  font-weight: 900;
+  letter-spacing: 0;
+  line-height: 16px;
+}
+
+.rp-manage-schools-main .rdt_Table .rdt_TableBody .rdt_TableRow {
+  min-height: 60px;
+
+  p.desc-cell {
+    figure.image {
+      height: 80px;
+      display: none;
+      img {
+        height: 80px;
+        width: 80px;
+      }
+    }
+    figure:nth-child(2) {
+      display: block !important;
+    }
+  }
+   p.myque-desc img {
+    object-fit: fill;
+    height: 70px;
+    width: 70px;
+  }
+}
+
+.admindatarow {
+  font-size: 15px;
+  color: #20282a;
+}
+
+.admindata-details-row {
+  font-size: 15px;
+}
+
+.badge-active {
+  color: #28c76f;
+  display: flex;
+}
+
+.badge-active .badge-dot-active {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #28c76f;
+  position: relative;
+  top: 4px;
+  margin-right: 5px;
+}
+
+.badge-leave {
+  color: orange;
+}
+
+.badge-active .badge-dot-leave {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: orange;
+  position: relative;
+  top: 4px;
+  margin-right: 5px;
+}
+.delete-popup {
+  top: 25%;
+  text-align: center;
+
+  .modal-footer {
+    justify-content: center !important;
+    button {
+      font-weight: 900;
+    }
+    button.btn-secondary {
+      background-color: #1c1c1c !important;
+    }
+  }
+  .modal-content {
+    min-height: 150px;
+    border-radius: 10px;
+  }
+  .modal-body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #20282a;
+    font-size: 19px;
+    font-weight: 900;
+  }
+}
+.rp-manage-schools-main {
+  .data-list-action {
+    .custom-switch .custom-control-label::before {
+      background-color: #1e1e1e;
+    }
+    .custom-switch-dark
+      .custom-control-input:checked
+      ~ .custom-control-label::before {
+      background-color: #28c76f !important;
+    }
+    .custom-check-dark
+      .custom-control-input:checked
+      ~ .custom-control-label::before {
+      background-color: #1e1e1e !important;
+    }
+  }
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  .status-btn-admin {
+    margin-bottom: 30px;
+    border: 1pt solid #8f89c7 !important;
+    background: #7367f0 !important;
+    width: max-content;
+  }
+  .delete-btn-admin {
+    margin-bottom: 30px;
+    border: 1pt solid c77f8b !important;
+    background: #db536a !important;
+    width: max-content;
+  }
+}
+
+.listing-manage-button-group {
+  display: flex;
+  .manage-button {
+    margin-left: 20px;
+  }
+}
+.approved-btn-group {
+  justify-content: flex-end;
+  .manage-button {
+    span.tautmore-admin-add-btn {
+      margin: 0px 10px;
+    }
+  }
+}

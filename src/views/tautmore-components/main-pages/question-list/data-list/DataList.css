@@ -1,0 +1,353 @@
+.add-new-btn-admin {
+  margin-bottom: 30px;
+}
+
+.datalistAdmin .filter-section input {
+  border-radius: 5px !important;
+}
+
+.rp-manage-school-header-title {
+  color: #454c4e;
+  font-size: 28px;
+  font-weight: Bold;
+  letter-spacing: 0;
+  line-height: 36px;
+}
+
+.AdminTotal-users .totalusersAdmin {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  margin-right: 0 !important;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.AdminTotal-users .totalusersAdmin h2 {
+  display: inline-block;
+  margin-bottom: 0;
+}
+
+.AdminTotal-users .totalusersAdmin h4 {
+  display: inline-block;
+  margin-bottom: 0;
+  margin-right: 15px;
+}
+
+.adminInformation {
+  font-size: 16px;
+  color: #20282a;
+  line-height: 22px;
+}
+
+.totalusersAdmin {
+  text-align: center;
+  width: 40%;
+  float: right;
+  margin-right: 35px;
+}
+
+.rp-manageSchool-head .sort-dropdown {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-radius: 10px !important;
+  border: 1pt solid #454c4e !important;
+}
+
+div.rp-manageSchool-head-main.actions-right {
+  width: 100%;
+  -webkit-box-pack: start !important;
+      -ms-flex-pack: start !important;
+          justify-content: flex-start !important;
+}
+
+div.rp-manageSchool-head-main.actions-right .data-list-rows-dropdown .customadmindropdown.dropdown-menu {
+  max-height: 150px;
+  overflow-y: scroll;
+  position: relative;
+}
+
+.rp-manageSchool-head.dropdown .customadmindropdown {
+  min-width: 100% !important;
+}
+
+.rp-manageSchool-head {
+  width: 23%;
+  margin-bottom: 15px;
+}
+
+.rp-manageSchool-head .subconcept-select .select__control {
+  padding: 0.85rem 0.65rem !important;
+  border-radius: 10px !important;
+  border: 1pt solid #454c4e !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+  cursor: pointer;
+}
+
+.rp-manageSchool-head .subconcept-select .select__control .select__value-container {
+  padding: 0 !important;
+}
+
+.rp-manageSchool-head .subconcept-select .select__control .select__value-container .css-b8ldur-Input {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.rp-manageSchool-head .subconcept-select .select__control .select__indicators .select__indicator-separator {
+  margin: 0 !important;
+  padding: 0 !important;
+  height: 0 !important;
+  width: 0 !important;
+}
+
+.rp-manageSchool-head .subconcept-select .select__control .select__indicators .select__dropdown-indicator {
+  padding: 0 !important;
+}
+
+.rp-manageSchool-head .subconcept-select .select__control .select__indicators .select__dropdown-indicator svg {
+  fill: #626262;
+  height: 16px;
+  width: 16px;
+}
+
+.rp-manageSchool-head .subconcept-select .select__menu {
+  min-width: 100% !important;
+  border-radius: 5px;
+  top: 0px;
+  left: 0px;
+  -webkit-transform: translate3d(5px, 47px, 0px) !important;
+          transform: translate3d(5px, 47px, 0px) !important;
+  right: auto;
+}
+
+.rp-manageSchool-head .subconcept-select .select__menu div > div {
+  padding: 0.714rem 1.428rem;
+  cursor: pointer;
+  background-color: transparent !important;
+  font-size: 15px;
+  color: #20282a;
+}
+
+.rp-manageSchool-head .subconcept-select .select__menu div > div:hover {
+  background-color: #f8f8f8 !important;
+  color: #7367f0;
+  line-height: 1.45;
+}
+
+.rp-manageSchool-head .subconcept-select .select__menu::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  width: 0.75rem;
+  height: 0.75rem;
+  display: block;
+  z-index: 10;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: #fff;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  -webkit-transform: rotate(45deg) translate(-7px);
+          transform: rotate(45deg) translate(-7px);
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+  right: 0.6rem;
+  left: auto;
+}
+
+.adminfilterSpan {
+  color: #20282a;
+  font-size: 16px;
+}
+
+.custom-filtersection input {
+  color: #20282a;
+  font-size: 16px;
+  border-radius: 10px !important;
+  border: 1pt solid #454c4e !important;
+  max-width: 250px !important;
+}
+
+.dropdown .customadmindropdown {
+  -webkit-transform: translate3d(5px, 47px, 0px) !important;
+          transform: translate3d(5px, 47px, 0px) !important;
+  min-width: 15rem !important;
+}
+
+.dropdown .customadmindropdown .dropdown-item {
+  font-size: 15px;
+  color: #20282a;
+  width: 100% !important;
+}
+
+.rp-manage-schools-main
+> div
+> div
+> div
+> div
+> div
+> .rdt_TableCol
+> div
+> div {
+  color: #20282a;
+  font-size: 16px;
+  font-weight: 900;
+  letter-spacing: 0;
+  line-height: 16px;
+}
+
+.rp-manage-schools-main .rdt_Table .rdt_TableBody .rdt_TableRow {
+  min-height: 60px;
+}
+
+.admindatarow {
+  font-size: 15px;
+  color: #20282a;
+}
+
+.admindata-details-row {
+  font-size: 15px;
+}
+
+.badge-active {
+  color: #28c76f;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.badge-active .badge-dot-active {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #28c76f;
+  position: relative;
+  top: 4px;
+  margin-right: 5px;
+}
+
+.badge-leave {
+  color: orange;
+}
+
+.badge-active .badge-dot-leave {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: orange;
+  position: relative;
+  top: 4px;
+  margin-right: 5px;
+}
+
+.delete-popup {
+  top: 25%;
+  text-align: center;
+}
+
+.delete-popup .modal-footer {
+  -webkit-box-pack: center !important;
+      -ms-flex-pack: center !important;
+          justify-content: center !important;
+}
+
+.delete-popup .modal-footer button {
+  font-weight: 900;
+}
+
+.delete-popup .modal-footer button.btn-secondary {
+  background-color: #1c1c1c !important;
+}
+
+.delete-popup .modal-content {
+  min-height: 150px;
+  border-radius: 10px;
+}
+
+.delete-popup .modal-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #20282a;
+  font-size: 19px;
+  font-weight: 900;
+}
+
+.rp-manage-schools-main .data-list-action .custom-switch .custom-control-label::before {
+  background-color: #1e1e1e;
+}
+
+.rp-manage-schools-main .data-list-action .custom-switch-dark
+.custom-control-input:checked
+~ .custom-control-label::before {
+  background-color: #28c76f !important;
+}
+
+.rp-manage-schools-main .data-list-action .custom-check-dark
+.custom-control-input:checked
+~ .custom-control-label::before {
+  background-color: #1e1e1e !important;
+}
+
+.button-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.button-group .status-btn-admin {
+  margin-bottom: 30px;
+  border: 1pt solid #8f89c7 !important;
+  background: #7367f0 !important;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.button-group .delete-btn-admin {
+  margin-bottom: 30px;
+  border: 1pt solid c77f8b !important;
+  background: #db536a !important;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.listing-manage-button-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.listing-manage-button-group .manage-button {
+  margin-left: 20px;
+}
+
+.approved-btn-group {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.approved-btn-group .manage-button span.tautmore-admin-add-btn {
+  margin: 0px 10px;
+}
+/*# sourceMappingURL=DataList.css.map */

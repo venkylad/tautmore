@@ -1,0 +1,109 @@
+.discountDetailsHead{
+    display: flex;
+    align-items: center;
+}
+
+.discountCoupon{
+    // width: 130px;
+    padding: 7px;
+    background-color: #cacaca;
+    color: rgb(214, 142, 8);
+    border-radius: 25px;
+    text-align: center;
+    margin-left: 10px;;
+}
+
+.discountSpan{
+    font-size: 15px;
+}
+
+.discountDetBtn{
+    font-size: 16px;
+    border:1pt solid #8aa099 !important;
+    background: #43AA8B !important;
+    color: #fff;
+    /* font-weight: 700; */
+    width: 100px;
+    
+    text-align: center;
+    padding: 12px 0px !important;
+    margin-right: 20px;
+    /* position: absolute;
+    right: 0px; */
+}
+
+// .discount-delete-btn{
+//     padding: 12px 0px !important;
+//     font-size: 16px;
+//     width: 100px;
+// }
+
+.discountBtnGrp{
+    text-align: right;
+}
+
+.discountDetailsCard{
+  margin-bottom: 80px;
+}
+
+.discountDetCardbody{
+    padding: 60px 60px 50px 60px;
+}
+
+.discountDetCoupon{
+    margin-top:20px;
+}
+
+.delete-popup {
+    top: 25%;
+    text-align: center;
+  }
+  
+  .delete-popup .modal-footer {
+    -webkit-box-pack: center !important;
+        -ms-flex-pack: center !important;
+            justify-content: center !important;
+  }
+  
+  .delete-popup .modal-footer button {
+    font-weight: 900;
+  }
+  
+  .delete-popup .modal-footer button.btn-secondary {
+    background-color: #1c1c1c !important;
+  }
+  
+  .delete-popup .modal-content {
+    min-height: 150px;
+    border-radius: 10px;
+  }
+  
+  .delete-popup .modal-body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    color: #20282a;
+    font-size: 19px;
+    font-weight: 900;
+  }
+
+  .admin-details-delete{
+    font-size: 16px;
+    /* background-color: #1e1e1e; */
+    border-color: #1e1e1e !important;
+    color: #1e1e1e !important;
+    /* font-weight: 700; */
+    width: 100px;
+    text-align: center;
+    padding: 12px 0px !important;
+    margin-right: 15px;
+  }
+  .admin-details-delete.back {
+    margin-right: 0;
+  }

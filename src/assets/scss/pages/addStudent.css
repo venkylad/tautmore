@@ -1,0 +1,53 @@
+.addStudent-bottom p {
+  margin: 0.6rem 0rem 0rem 0rem;
+}
+
+.addstudent-addbtn {
+  font-weight: 700;
+  border: 1pt solid #8aa099 !important;
+  background: #43aa8b !important;
+}
+
+.addstudent-datainput::-webkit-input-placeholder {
+  color: red !important;
+}
+
+.addstudent-datainput:-ms-input-placeholder {
+  color: red !important;
+}
+
+.addstudent-datainput::-ms-input-placeholder {
+  color: red !important;
+}
+
+.addstudent-datainput::placeholder {
+  color: red !important;
+}
+
+.addstudent-datainput::-webkit-input-placeholder {
+  color: red !important;
+}
+
+.addstudent-inputradio {
+  height: 15px !important;
+  width: 15px !important;
+}
+
+.addstudent-inputlabel {
+  font-size: 1rem;
+}
+
+.add-imageline {
+  color: blue;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.rp-manage-school-input-title {
+  color: #20282a;
+  font-size: 15px;
+  font-weight: 900;
+  letter-spacing: 0;
+  line-height: 30px;
+}
+/*# sourceMappingURL=addStudent.css.map */

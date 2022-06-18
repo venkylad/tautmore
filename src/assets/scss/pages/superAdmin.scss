@@ -1,0 +1,34 @@
+.super-editbtn {
+  margin-bottom: 8px;
+  button {
+    width: 110px;
+  }
+}
+
+.super-deletebtn {
+  button {
+    width: 110px;
+  }
+}
+.superAdmin-body {
+  background: white;
+  margin-top: 5.5rem;
+  width: 100%;
+  margin-right: 0;
+  margin-left: 0;
+  padding: 2rem 1rem;
+
+  h5 {
+    color: black;
+    font-weight: 700;
+  }
+}
+.superAdmin-heading {
+  p {
+    margin-left: 1.5rem;
+  }
+}
+.fullaccess-content {
+  color: black;
+  font-weight: 700;
+}
