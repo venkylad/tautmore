@@ -13,6 +13,7 @@ const BoardsItem = ({ open }) => {
     const res = await fetch(`${clientUrl}/api/board/getAllBoards`);
     const data = await res.json();
     setBoards(data?.boards);
+    dispatch(selectBoardAction(data?.boards[0]));
   };
 
   useEffect(() => {
@@ -27,7 +28,7 @@ const BoardsItem = ({ open }) => {
         <div
           style={{
             width: "100%",
-            padding: "20px",
+            padding: "20px 0px",
           }}
         >
           {boards?.map((board) => (

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./styles.css";
 import Bin from "./trash.svg";
 import "react-responsive-modal/styles.css";
@@ -7,6 +7,8 @@ import parse from "html-react-parser";
 import { Editor } from "@tinymce/tinymce-react";
 import { retrieveImageFromClipboardAsBlob, uploadFile } from "./plugins";
 import { clientUrl } from "../../../services/api-fetch/Axios";
+import axios from "axios";
+import { useSelector } from "react-redux";
 
 const Concept = () => {
   const [subTopics, setSubTopics] = useState([]);
@@ -17,53 +19,142 @@ const Concept = () => {
 
   const [content, setContent] = useState("");
 
+  // const { subject, subConcept } = useSelector(
+  //   (state) => state.selectForContent
+  // );
+
+  const subject = "61cae44784278500096fdcaf";
+  const subConcept = "61cc0ca06cdfe11016fbf191";
+
+  console.log(currVideo);
+  console.log(currSubTopic);
+
+  const fetchSubtopics = async () => {
+    const { data } = await axios.get(
+      `${clientUrl}/api/admin/content-and-video-details?subject=${subject}&subConcept=${subConcept}`
+    );
+    console.log(data?.data, "DATA");
+    setSubTopics(data?.data?.contents);
+    setVideos(data?.data?.videos);
+    console.log(data?.data?.videos, "VIDEOS");
+  };
+
   const conceptData = {
     content: "",
+    index: 1,
   };
 
   const videoData = {
     type: "",
     title: "",
-    url: "",
+    link: "",
+    index: 1,
   };
 
-  const addSubTopic = () => {
+  const addSubTopic = async () => {
+    await axios
+      .post(`${clientUrl}/api/content/add-content`, {
+        content: "Placeholder for content",
+        index: 1,
+        subject,
+        subConcept,
+      })
+      .then((res) => console.log(res))
+      .catch((err) => console.log(err));
     setSubTopics([
       ...subTopics,
-      { ...conceptData, id: Math.floor(Math.random() * 1000 + 1) },
+      {
+        ...conceptData,
+        content: "Placeholder for content",
+      },
     ]);
   };
 
-  const addVideo = () => {
+  const addVideo = async () => {
+    await axios
+      .post(`${clientUrl}/api/video/add-video`, {
+        title: "Video Placeholder",
+        link: "http://dummylink3",
+        index: 1,
+        subject,
+        subConcept,
+      })
+      .then((res) => console.log(res))
+      .catch((err) => console.log(err));
     setVideos([
       ...videos,
-      { ...videoData, id: Math.floor(Math.random() * 1000 + 1) },
+      {
+        ...videoData,
+        title: "Video Placeholder",
+        link: "http://dummylink3",
+        index: 1,
+        subject,
+        subConcept,
+      },
     ]);
   };
 
-  const removeConcept = (id) => {
-    setSubTopics(subTopics?.filter((item) => item?.id !== id));
+  const removeConcept = async (_id) => {
+    await axios
+      .post(`${clientUrl}/api/content/delete-content`, {
+        contentId: _id,
+        subject: subject,
+        subConcept: subConcept,
+      })
+      .then((res) => console.log(res))
+      .catch((err) => console.log(err));
+    setSubTopics(subTopics?.filter((item) => item?._id !== _id));
   };
 
-  const removeVideo = (id) => {
-    setVideos(videos?.filter((item) => item?.id !== id));
+  const removeVideo = async (_id) => {
+    await axios
+      .post(`${clientUrl}/api/video/delete-video`, {
+        videoId: _id,
+        subject: subject,
+        subConcept: subConcept,
+      })
+      .then((res) => console.log(res))
+      .catch((err) => console.log(err));
+    setVideos(videos?.filter((item) => item?._id !== _id));
   };
 
-  const editConcept = () => {
+  const editConcept = async () => {
     const updatedConcepts = subTopics?.map((item) => {
-      return item.id === currSubTopic.id ? currSubTopic : item;
+      return item._id === currSubTopic._id ? currSubTopic : item;
     });
     console.log(updatedConcepts, "EDIT");
     setSubTopics(updatedConcepts);
+    await axios
+      .post(`${clientUrl}/api/content/edit-content`, {
+        contentId: currSubTopic?._id,
+        content: currSubTopic?.content,
+        index: currSubTopic?.index,
+      })
+      .then((res) => console.log(res))
+      .catch((err) => console.log(err));
   };
 
-  const editVideo = () => {
+  const editVideo = async () => {
     const updatedVideos = videos?.map((item) => {
-      return item.id === currVideo.id ? currVideo : item;
+      return item._id === currVideo._id ? currVideo : item;
     });
     console.log(updatedVideos);
     setVideos(updatedVideos);
+
+    await axios
+      .post(`${clientUrl}/api/video/edit-video`, {
+        videoId: currVideo?._id,
+        title: currVideo?.title,
+        link: currVideo?.link,
+        index: 1,
+      })
+      .then((res) => console.log(res))
+      .catch((err) => console.log(err));
   };
+
+  useEffect(() => {
+    fetchSubtopics();
+  }, []);
 
   return (
     <div className="wrap">
@@ -81,14 +172,14 @@ const Concept = () => {
 
       <div className="content-wrap">
         {subTopics?.map((subTopic) => (
-          <div key={subTopic?.id} className="content-editor">
+          <div key={subTopic?._id} className="content-editor">
             <div className="editor-cke">
               <div className="inner">
                 <Editor
                   apiKey="qqxd283lio3pb7pn7nmhvx644be3wdta7s32ej6z1s0ij597"
                   // initialValue={quebodyval !== "" ? quebodyval.toString() : ""}
                   value={
-                    (currSubTopic?.id === subTopic?.id && content) ||
+                    (currSubTopic?._id === subTopic?._id && content) ||
                     subTopic?.content
                   }
                   init={{
@@ -224,13 +315,12 @@ const Concept = () => {
                     });
                   }}
                   onBlur={(event, editor) => {
-                    editConcept();
                     console.log("left");
                     setCurrentSubTopic({
                       ...currSubTopic,
-                      content: content.toString(),
+                      content: content,
                     });
-                    setContent("");
+                    editConcept();
                   }}
                   onFocus={(event, editor) => {
                     console.log("entered");
@@ -240,7 +330,7 @@ const Concept = () => {
                 />
 
                 <button
-                  onClick={() => removeConcept(subTopic?.id)}
+                  onClick={() => removeConcept(subTopic?._id)}
                   className="remove-btn"
                 >
                   <img src={Bin} alt="" />
@@ -255,18 +345,18 @@ const Concept = () => {
       </div>
 
       {videos?.map((video) => (
-        <div key={video?.id} className="video-wrap">
+        <div key={video?._id} className="video-wrap">
           <div className="video-wrap-col-1">
             <div className="radio-wrap">
               <input
                 type="radio"
                 checked={video?.type === "video"}
                 value="video"
-                onFocus={() => setCurrVideo(video)}
-                onBlur={() => editVideo()}
-                onChange={(e) =>
-                  setCurrVideo({ ...currVideo, type: e.target.value })
-                }
+                // onFocus={() => setCurrVideo(video)}
+                // onBlur={() => editVideo()}
+                // onChange={(e) =>
+                //   setCurrVideo({ ...currVideo, type: e.target.value })
+                // }
               />{" "}
               <p>Video</p>
             </div>
@@ -275,11 +365,11 @@ const Concept = () => {
                 type="radio"
                 checked={video?.type === "gif"}
                 value="gif"
-                onFocus={() => setCurrVideo(video)}
-                onBlur={() => editVideo()}
-                onChange={(e) =>
-                  setCurrVideo({ ...currVideo, type: e.target.value })
-                }
+                // onFocus={() => setCurrVideo(video)}
+                // onBlur={() => editVideo()}
+                // onChange={(e) =>
+                //   setCurrVideo({ ...currVideo, type: e.target.value })
+                // }
               />{" "}
               <p>GIF</p>
             </div>
@@ -291,13 +381,15 @@ const Concept = () => {
                 type="text"
                 placeholder="Title"
                 value={
-                  currVideo?.id === video?.id ? currVideo?.title : video?.title
+                  currVideo?._id === video?._id
+                    ? currVideo?.title
+                    : video?.title
                 }
-                onFocus={() => setCurrVideo(video)}
-                onBlur={() => editVideo()}
                 onChange={(e) =>
                   setCurrVideo({ ...currVideo, title: e.target.value })
                 }
+                onFocus={() => setCurrVideo(video)}
+                onBlur={() => editVideo()}
               />
             </div>
             <div className="text-wrap">
@@ -306,10 +398,10 @@ const Concept = () => {
                 type="text"
                 placeholder="URL"
                 value={
-                  currVideo?.id === video?.id ? currVideo?.url : video?.url
+                  currVideo?._id === video?._id ? currVideo?.link : video?.link
                 }
                 onChange={(e) =>
-                  setCurrVideo({ ...currVideo, url: e.target.value })
+                  setCurrVideo({ ...currVideo, link: e.target.value })
                 }
                 onFocus={() => setCurrVideo(video)}
                 onBlur={() => editVideo()}
@@ -317,7 +409,7 @@ const Concept = () => {
             </div>
             <button
               className="remove-video-btn"
-              onClick={() => removeVideo(video?.id)}
+              onClick={() => removeVideo(video?._id)}
             >
               <img src={Bin} alt="" />
             </button>
@@ -330,7 +422,7 @@ const Concept = () => {
       <Modal open={open} onClose={() => setOpen(false)}>
         <div className="modal-wrap">
           {subTopics?.map((subTopic) => (
-            <div key={subTopic?.id}>{parse(subTopic?.content)}</div>
+            <div key={subTopic?._id}>{parse(subTopic?.content)}</div>
           ))}
         </div>
       </Modal>

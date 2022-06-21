@@ -14,6 +14,7 @@ import {
   getConceptsByChapterReducer,
   getSubjectsByClassReducer,
   selectBoardReducer,
+  selectForContentReducer,
 } from "./boards-sidebar";
 
 const rootReducer = combineReducers({
@@ -30,6 +31,7 @@ const rootReducer = combineReducers({
   getSubjectsByClass: getSubjectsByClassReducer,
   getChaptersBySubject: getChaptersBySubjectReducer,
   getConceptsByChapter: getConceptsByChapterReducer,
+  selectForContent: selectForContentReducer,
 });
 
 export default rootReducer;

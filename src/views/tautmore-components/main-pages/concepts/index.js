@@ -17,6 +17,7 @@ import {
   getClassByBoardAction,
   getConceptByChapterAction,
   getSubjectsByClassAction,
+  selectForContentAction,
 } from "../../../../redux/actions/boards-sidebar";
 import classnames from "classnames";
 import "../question-list/data-list/operator/Operator.scss";
@@ -70,6 +71,27 @@ const Concepts = () => {
     console.log("loop-3");
   }, [grades]);
 
+  useEffect(() => {
+    if (!subjectVal?.name) {
+      setSubjectVal(subjects[0]);
+    }
+    console.log("loop-subs");
+  }, [subjects]);
+
+  useEffect(() => {
+    if (!chapterVal?.name) {
+      setChapterVal(chapters[0]);
+    }
+    console.log("loop-chapters");
+  }, [chapters]);
+
+  useEffect(() => {
+    if (!conceptVal?.name) {
+      setConceptVal(concepts[0]);
+    }
+    console.log("loop-concept");
+  }, [concepts]);
+
   return (
     <div>
       <Nav tabs className="questionsTab">
@@ -94,6 +116,7 @@ const Concepts = () => {
           className="data-list-rows-dropdown rp-manageSchool-head-Opquest mr-1 d-md-block d-none"
           disabled={subjects?.length === 0}
         >
+          <h4>Subjects</h4>
           <DropdownToggle color="" className="sort-dropdown">
             {/* <span className="align-middle mx-50 adminfilterOpquestSpan"> */}
             {subjectVal?.name || "Subjects"}
@@ -112,6 +135,7 @@ const Concepts = () => {
           className="data-list-rows-dropdown rp-manageSchool-head-Opquest mr-1 d-md-block d-none"
           disabled={chapters?.length === 0}
         >
+          <h4>Chapters</h4>
           <DropdownToggle color="" className="sort-dropdown">
             {/* <span className="align-middle mx-50 adminfilterOpquestSpan"> */}
             {chapterVal?.name || "Chapters"}
@@ -130,6 +154,7 @@ const Concepts = () => {
           className="data-list-rows-dropdown rp-manageSchool-head-Opquest mr-1 d-md-block d-none"
           disabled={concepts?.length === 0}
         >
+          <h4>Concepts</h4>
           <DropdownToggle color="" className="sort-dropdown">
             {/* <span className="align-middle mx-50 adminfilterOpquestSpan"> */}
             {conceptVal?.name || "Concepts"}
@@ -145,6 +170,7 @@ const Concepts = () => {
           </DropdownMenu>
         </UncontrolledDropdown>
         <div className="discountfilter-section custom-filtersection">
+          <h4>Search</h4>
           <form onSubmit={() => {}}>
             <Input
               type="text"
@@ -159,16 +185,24 @@ const Concepts = () => {
 
       <TabContent>
         <div className="tab-content">
-          {subConcepts?.map((item, i) => (
-            <div className="tab_item" key={i}>
-              <div className="name">
-                <p>{item?.name}</p>
+          {subConcepts?.map((item, i) => {
+            const data = {
+              subConcept: item._id,
+              subject: subjectVal._id,
+            };
+            return (
+              <div className="tab_item" key={i}>
+                <div className="name">
+                  <p>{item?.name}</p>
+                </div>
+                <p>{activeClass?.name}</p>
+                <p>{subjectVal?.name}</p>
+                <div onClick={() => dispatch(selectForContentAction(data))}>
+                  <Link to="/manage-subconcepts">View & Edit</Link>
+                </div>
               </div>
-              <p>{activeClass?.name}</p>
-              <p>{subjectVal?.name}</p>
-              <Link to="/manage-subconcepts">More Info </Link>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </TabContent>
     </div>

@@ -16,6 +16,21 @@ export const selectBoardReducer = (state = initState, action) => {
   }
 };
 
+export const selectForContentReducer = (
+  state = {
+    subConcept: "",
+    subject: "",
+  },
+  action
+) => {
+  switch (action.type) {
+    case "SELECT_FOR_CONTENT":
+      return action.payload;
+    default:
+      return state;
+  }
+};
+
 export const getClassByBoardReducer = (state = [], action) => {
   switch (action.type) {
     case "GET_CLASS_BY_BOARD":

@@ -168,7 +168,7 @@
 }
 
 .react-responsive-modal-modal {
-  max-width: 1100px;
+  max-width: 1100px !important;
   z-index: 99999;
 }
 

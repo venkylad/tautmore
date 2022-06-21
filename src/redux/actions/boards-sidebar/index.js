@@ -8,6 +8,13 @@ export const selectBoardAction = (data) => {
   };
 };
 
+export const selectForContentAction = (data) => {
+  return {
+    type: "SELECT_FOR_CONTENT",
+    payload: data,
+  };
+};
+
 export const getClassByBoardAction = (board_id) => async (dispatch) => {
   try {
     if (board_id) {
