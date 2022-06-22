@@ -32,10 +32,8 @@ const Concept = () => {
     const { data } = await axios.get(
       `${clientUrl}/api/admin/content-and-video-details?subject=${subject}&subConcept=${subConcept}`
     );
-    console.log(data?.data, "DATA");
     setSubTopics(data?.data?.contents);
     setVideos(data?.data?.videos);
-    console.log(data?.data?.videos, "VIDEOS");
   };
 
   const conceptData = {
@@ -43,7 +41,6 @@ const Concept = () => {
     index: 1,
     subject,
     subConcept,
-    _id: uuid(),
   };
 
   const videoData = {
@@ -61,7 +58,11 @@ const Concept = () => {
         subject,
         subConcept,
       })
-      .then((res) => setSubTopics([...subTopics, conceptData]))
+      .then((res) => {
+        console.log(res);
+        // setSubTopics([...subTopics, { ...conceptData }]);
+        fetchSubtopics();
+      })
       .catch((err) => console.log(err));
   };
 
@@ -73,20 +74,24 @@ const Concept = () => {
         index: 1,
         subject,
         subConcept,
+        type: "video",
       })
-      .then((res) => console.log(res))
+      .then((res) => {
+        console.log(res);
+        fetchSubtopics();
+      })
       .catch((err) => console.log(err));
-    setVideos([
-      ...videos,
-      {
-        ...videoData,
-        title: "Video Placeholder",
-        link: "http://dummylink3",
-        index: 1,
-        subject,
-        subConcept,
-      },
-    ]);
+    // setVideos([
+    //   ...videos,
+    //   {
+    //     ...videoData,
+    //     title: "Video Placeholder",
+    //     link: "http://dummylink3",
+    //     index: 1,
+    //     subject,
+    //     subConcept,
+    //   },
+    // ]);
   };
 
   const removeConcept = async (_id) => {
@@ -96,7 +101,10 @@ const Concept = () => {
         subject: subject,
         subConcept: subConcept,
       })
-      .then((res) => console.log(res))
+      .then((res) => {
+        console.log(res);
+        fetchSubtopics();
+      })
       .catch((err) => console.log(err));
     setSubTopics(subTopics?.filter((item) => item?._id !== _id));
   };
@@ -108,16 +116,19 @@ const Concept = () => {
         subject: subject,
         subConcept: subConcept,
       })
-      .then((res) => console.log(res))
+      .then((res) => {
+        console.log(res);
+        fetchSubtopics();
+      })
       .catch((err) => console.log(err));
-    setVideos(videos?.filter((item) => item?._id !== _id));
+    // setVideos(videos?.filter((item) => item?._id !== _id));
   };
 
   const editConcept = async () => {
-    const updatedConcepts = subTopics?.map((item) => {
-      return item._id === currSubTopic._id ? currSubTopic : item;
-    });
-    console.log(updatedConcepts, "EDIT");
+    // const updatedConcepts = subTopics?.map((item) => {
+    //   return item._id === currSubTopic._id ? currSubTopic : item;
+    // });
+    // console.log(updatedConcepts, "EDIT");
 
     await axios
       .post(`${clientUrl}/api/content/edit-content`, {
@@ -127,7 +138,9 @@ const Concept = () => {
       })
       .then((res) => {
         console.log(res);
-        setSubTopics(updatedConcepts);
+        fetchSubtopics();
+        // setSubTopics(updatedConcepts);
+        setCurrentSubTopic({});
       })
       .catch((err) => {
         console.log(err);
@@ -135,21 +148,22 @@ const Concept = () => {
   };
 
   const editVideo = async () => {
-    const updatedVideos = videos?.map((item) => {
-      return item._id === currVideo._id ? currVideo : item;
-    });
-    console.log(updatedVideos);
+    // const updatedVideos = videos?.map((item) => {
+    //   return item._id === currVideo._id ? currVideo : item;
+    // });
+    // console.log(updatedVideos);
 
     await axios
       .post(`${clientUrl}/api/video/edit-video`, {
         videoId: currVideo?._id,
         title: currVideo?.title,
         link: currVideo?.link,
+        type: currVideo?.type,
         index: 1,
       })
       .then((res) => {
         console.log(res);
-        setVideos(updatedVideos);
+        fetchSubtopics();
       })
       .catch((err) => console.log(err));
   };
@@ -157,6 +171,8 @@ const Concept = () => {
   useEffect(() => {
     fetchSubtopics();
   }, []);
+
+  console.log(currVideo);
 
   return (
     <div className="wrap">
@@ -173,17 +189,14 @@ const Concept = () => {
       )}
 
       <div className="content-wrap">
-        {subTopics?.map((subTopic, i) => (
+        {subTopics?.map((subTopic) => (
           <div key={subTopic?._id} className="content-editor">
             <div className="editor-cke">
               <div className="inner">
                 <Editor
                   apiKey="qqxd283lio3pb7pn7nmhvx644be3wdta7s32ej6z1s0ij597"
                   // initialValue={quebodyval !== "" ? quebodyval.toString() : ""}
-                  value={
-                    (currSubTopic?._id === subTopic?._id && content) ||
-                    subTopic?.content
-                  }
+
                   init={{
                     external_plugins: {
                       tiny_mce_wiris: `https://www.wiris.net/demo/plugins/tiny_mce/plugin.js`,
@@ -309,26 +322,32 @@ const Concept = () => {
                       reader.readAsDataURL(blobInfo.blob());
                     },
                   }}
+                  value={
+                    currSubTopic?._id !== subTopic?._id
+                      ? subTopic?.content
+                      : currSubTopic?.content
+                  }
                   onEditorChange={(data) => {
-                    setContent(data);
+                    // setContent(data);
                     setCurrentSubTopic({
                       ...currSubTopic,
                       content: data,
                     });
                   }}
                   // onBlur={(event, editor) => {
+                  //   editConcept();
                   //   console.log("left");
                   //   setCurrentSubTopic({
                   //     ...currSubTopic,
-                  //     content: content,
+                  //     content: content.toString(),
                   //   });
-                  //   editConcept();
+                  //   setContent("");
                   // }}
                   onFocus={(event, editor) => {
-                    setCurr(i);
-                    console.log("entered");
+                    console.log(subTopic);
                     setCurrentSubTopic(subTopic);
-                    setContent(subTopic?.content);
+                    // console.log(currSubTopic);
+                    // setContent(subTopic?.content);
                   }}
                 />
 
@@ -340,17 +359,15 @@ const Concept = () => {
                 </button>
               </div>
               <button
-                className="save-btn-blue "
+                disabled={currSubTopic?._id !== subTopic?._id}
+                className="save-btn-blue"
                 onClick={() => {
-                  setCurrentSubTopic({
-                    ...currSubTopic,
-                    content,
-                  });
-                  editConcept();
-                  setContent("");
+                  if (currSubTopic?._id === subTopic?._id) {
+                    editConcept();
+                  }
                 }}
               >
-                save
+                Save
               </button>
             </div>
           </div>
@@ -361,27 +378,49 @@ const Concept = () => {
       </div>
 
       {videos?.map((video) => (
-        <div key={video?._id} className="video-wrap">
+        <div
+          key={video?._id}
+          className="video-wrap"
+          onClick={() => {
+            if (currVideo?._id !== video?._id) {
+              setCurrVideo(video);
+            }
+          }}
+        >
           <div className="video-wrap-col-1">
             <div className="radio-wrap">
               <input
                 type="radio"
-                checked={video?.type === "video"}
+                checked={
+                  currVideo?._id !== video?._id
+                    ? video?.type === "video"
+                    : currVideo?.type === "video"
+                }
                 value="video"
-                onFocus={() => setCurrVideo(video)}
-                onBlur={() => editVideo()}
-                onChange={(e) => setCurrVideo({ ...currVideo, type: "video" })}
+                name={`type${video?._id}`}
+                // onFocus={() => setCurrVideo(video)}
+                // onBlur={() => editVideo()}
+                onChange={(e) =>
+                  setCurrVideo({ ...currVideo, type: e.target.value })
+                }
               />{" "}
               <p>Video</p>
             </div>
             <div className="radio-wrap">
               <input
                 type="radio"
-                checked={video?.type === "gif"}
+                checked={
+                  currVideo?._id !== video?._id
+                    ? video?.type === "gif"
+                    : currVideo?.type === "gif"
+                }
                 value="gif"
-                onFocus={() => setCurrVideo(video)}
-                onBlur={() => editVideo()}
-                onChange={(e) => setCurrVideo({ ...currVideo, type: "gif" })}
+                name={`type${video?._id}`}
+                // onFocus={() => setCurrVideo(video)}
+                // onBlur={() => editVideo()}
+                onChange={(e) =>
+                  setCurrVideo({ ...currVideo, type: e.target.value })
+                }
               />{" "}
               <p>GIF</p>
             </div>
@@ -397,11 +436,11 @@ const Concept = () => {
                     ? currVideo?.title
                     : video?.title
                 }
+                // onFocus={() => setCurrVideo(video)}
+                // onBlur={() => editVideo()}
                 onChange={(e) =>
                   setCurrVideo({ ...currVideo, title: e.target.value })
                 }
-                onFocus={() => setCurrVideo(video)}
-                onBlur={() => editVideo()}
               />
             </div>
             <div className="text-wrap">
@@ -415,16 +454,31 @@ const Concept = () => {
                 onChange={(e) =>
                   setCurrVideo({ ...currVideo, link: e.target.value })
                 }
-                onFocus={() => setCurrVideo(video)}
-                onBlur={() => editVideo()}
+                // onFocus={() => setCurrVideo(video)}
+                // onBlur={() => editVideo()}
               />
             </div>
-            <button
-              className="remove-video-btn"
-              onClick={() => removeVideo(video?._id)}
-            >
-              <img src={Bin} alt="" />
-            </button>
+            <div className="text-wrap">
+              <button
+                className="save-btn-blue"
+                disabled={currVideo?._id !== video?._id}
+                onClick={() => {
+                  if (currVideo?._id === video?._id) {
+                    editVideo();
+                  }
+                }}
+              >
+                Save
+              </button>
+            </div>
+            <div className="text-wrap">
+              <button
+                className="remove-video-btn"
+                onClick={() => removeVideo(video?._id)}
+              >
+                <img src={Bin} alt="" />
+              </button>
+            </div>
           </div>
         </div>
       ))}
