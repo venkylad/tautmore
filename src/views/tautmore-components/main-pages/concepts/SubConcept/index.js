@@ -9,10 +9,12 @@ import { retrieveImageFromClipboardAsBlob, uploadFile } from "./plugins";
 import { clientUrl } from "../../../services/api-fetch/Axios";
 import axios from "axios";
 import { useSelector } from "react-redux";
+import { uuid } from "uuidv4";
 
 const Concept = () => {
   const [subTopics, setSubTopics] = useState([]);
   const [videos, setVideos] = useState([]);
+  const [curr, setCurr] = useState("");
   const [currSubTopic, setCurrentSubTopic] = useState({});
   const [currVideo, setCurrVideo] = useState({});
   const [open, setOpen] = useState(false);
@@ -24,10 +26,7 @@ const Concept = () => {
   // );
 
   const subject = "61cae44784278500096fdcaf";
-  const subConcept = "61cc0ca06cdfe11016fbf191";
-
-  console.log(currVideo);
-  console.log(currSubTopic);
+  const subConcept = "61cc0ca36cdfe11016fbf212";
 
   const fetchSubtopics = async () => {
     const { data } = await axios.get(
@@ -40,8 +39,11 @@ const Concept = () => {
   };
 
   const conceptData = {
-    content: "",
+    content: "Placeholder for content",
     index: 1,
+    subject,
+    subConcept,
+    _id: uuid(),
   };
 
   const videoData = {
@@ -59,15 +61,8 @@ const Concept = () => {
         subject,
         subConcept,
       })
-      .then((res) => console.log(res))
+      .then((res) => setSubTopics([...subTopics, conceptData]))
       .catch((err) => console.log(err));
-    setSubTopics([
-      ...subTopics,
-      {
-        ...conceptData,
-        content: "Placeholder for content",
-      },
-    ]);
   };
 
   const addVideo = async () => {
@@ -123,15 +118,20 @@ const Concept = () => {
       return item._id === currSubTopic._id ? currSubTopic : item;
     });
     console.log(updatedConcepts, "EDIT");
-    setSubTopics(updatedConcepts);
+
     await axios
       .post(`${clientUrl}/api/content/edit-content`, {
         contentId: currSubTopic?._id,
         content: currSubTopic?.content,
         index: currSubTopic?.index,
       })
-      .then((res) => console.log(res))
-      .catch((err) => console.log(err));
+      .then((res) => {
+        console.log(res);
+        setSubTopics(updatedConcepts);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   };
 
   const editVideo = async () => {
@@ -139,7 +139,6 @@ const Concept = () => {
       return item._id === currVideo._id ? currVideo : item;
     });
     console.log(updatedVideos);
-    setVideos(updatedVideos);
 
     await axios
       .post(`${clientUrl}/api/video/edit-video`, {
@@ -148,7 +147,10 @@ const Concept = () => {
         link: currVideo?.link,
         index: 1,
       })
-      .then((res) => console.log(res))
+      .then((res) => {
+        console.log(res);
+        setVideos(updatedVideos);
+      })
       .catch((err) => console.log(err));
   };
 
@@ -171,7 +173,7 @@ const Concept = () => {
       )}
 
       <div className="content-wrap">
-        {subTopics?.map((subTopic) => (
+        {subTopics?.map((subTopic, i) => (
           <div key={subTopic?._id} className="content-editor">
             <div className="editor-cke">
               <div className="inner">
@@ -314,15 +316,16 @@ const Concept = () => {
                       content: data,
                     });
                   }}
-                  onBlur={(event, editor) => {
-                    console.log("left");
-                    setCurrentSubTopic({
-                      ...currSubTopic,
-                      content: content,
-                    });
-                    editConcept();
-                  }}
+                  // onBlur={(event, editor) => {
+                  //   console.log("left");
+                  //   setCurrentSubTopic({
+                  //     ...currSubTopic,
+                  //     content: content,
+                  //   });
+                  //   editConcept();
+                  // }}
                   onFocus={(event, editor) => {
+                    setCurr(i);
                     console.log("entered");
                     setCurrentSubTopic(subTopic);
                     setContent(subTopic?.content);
@@ -336,6 +339,19 @@ const Concept = () => {
                   <img src={Bin} alt="" />
                 </button>
               </div>
+              <button
+                className="save-btn-blue "
+                onClick={() => {
+                  setCurrentSubTopic({
+                    ...currSubTopic,
+                    content,
+                  });
+                  editConcept();
+                  setContent("");
+                }}
+              >
+                save
+              </button>
             </div>
           </div>
         ))}
@@ -352,11 +368,9 @@ const Concept = () => {
                 type="radio"
                 checked={video?.type === "video"}
                 value="video"
-                // onFocus={() => setCurrVideo(video)}
-                // onBlur={() => editVideo()}
-                // onChange={(e) =>
-                //   setCurrVideo({ ...currVideo, type: e.target.value })
-                // }
+                onFocus={() => setCurrVideo(video)}
+                onBlur={() => editVideo()}
+                onChange={(e) => setCurrVideo({ ...currVideo, type: "video" })}
               />{" "}
               <p>Video</p>
             </div>
@@ -365,11 +379,9 @@ const Concept = () => {
                 type="radio"
                 checked={video?.type === "gif"}
                 value="gif"
-                // onFocus={() => setCurrVideo(video)}
-                // onBlur={() => editVideo()}
-                // onChange={(e) =>
-                //   setCurrVideo({ ...currVideo, type: e.target.value })
-                // }
+                onFocus={() => setCurrVideo(video)}
+                onBlur={() => editVideo()}
+                onChange={(e) => setCurrVideo({ ...currVideo, type: "gif" })}
               />{" "}
               <p>GIF</p>
             </div>

@@ -25,9 +25,11 @@ import "../question-list/data-list/DataList.scss";
 import { ChevronDown } from "react-feather";
 import { clientUrl } from "../../services/api-fetch/Axios";
 import "./concept.css";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 const Concepts = () => {
+  const history = useHistory();
+
   const board = useSelector((state) => state?.selectBoard);
   const grades = useSelector((state) => state?.getClassByBoard);
   const subjects = useSelector((state) => state?.getSubjectsByClass);
@@ -40,29 +42,43 @@ const Concepts = () => {
   const [chapterVal, setChapterVal] = useState({});
   const [conceptVal, setConceptVal] = useState({});
   const [subConcepts, setSubConcepts] = useState([]);
+  const [pageNum, setPageNum] = useState(1);
+  const [search, setSearch] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState({
+    error: false,
+    message: "",
+  });
+  const [redirect, setRedirect] = useState("/manage-boards");
 
   const fetchConcepts = async (id) => {
-    const { data } = await axios.get(
-      `${clientUrl}/api/admin/subconcepts-listing?class=${activeClass?._id}&subject=${subjectVal?._id}&page_no=1&chapter=${chapterVal?._id}&concept=${conceptVal?._id}`
-    );
-    setSubConcepts(data?.data[0]?.response);
+    setLoading(true);
+    await axios
+      .get(
+        `${clientUrl}/api/admin/subconcepts-listing?class=${
+          activeClass?._id
+        }&subject=${subjectVal?._id || ""}&page_no=${pageNum}&chapter=${
+          chapterVal?._id || ""
+        }&concept=${conceptVal?._id || ""}`
+      )
+      .then(({ data }) => setSubConcepts(data?.data[0]?.response))
+      .catch((err) =>
+        setTimeout(() => setError({ error: true, message: err.message }), 3500)
+      );
+    setLoading(false);
   };
 
-  const fetchGrades = async () => {};
-
-  useEffect(() => {
-    dispatch(getClassByBoardAction(board?._id));
-    dispatch(getSubjectsByClassAction(activeClass?._id));
-    dispatch(getChaptersBySubjectAction(subjectVal?._id));
-    dispatch(getConceptByChapterAction(chapterVal?._id));
-    setSubConcepts([]);
-    console.log("loop-1");
-  }, [board, activeClass, subjectVal, chapterVal, conceptVal]);
-
-  useEffect(() => {
-    fetchConcepts();
-    console.log("loop-2");
-  }, [conceptVal]);
+  const fetchContent = async (subject, subConcept) => {
+    setRedirect("");
+    const { data } = await axios.get(
+      `${clientUrl}/api/admin/content-and-video-details?subject=${subject}&subConcept=${subConcept}`
+    );
+    if (data?.data?.contents?.length > 0 || data?.data?.videos?.length > 0) {
+      history.push("/manage-subconcepts-preview");
+    } else {
+      history.push("/manage-subconcepts");
+    }
+  };
 
   useEffect(() => {
     if (!activeClass?.name) {
@@ -75,22 +91,18 @@ const Concepts = () => {
     if (!subjectVal?.name) {
       setSubjectVal(subjects[0]);
     }
-    console.log("loop-subs");
-  }, [subjects]);
+    fetchConcepts();
+    console.log("loop-2");
+  }, [conceptVal, pageNum, subjects, chapterVal, subjectVal, activeClass]);
 
   useEffect(() => {
-    if (!chapterVal?.name) {
-      setChapterVal(chapters[0]);
-    }
-    console.log("loop-chapters");
-  }, [chapters]);
-
-  useEffect(() => {
-    if (!conceptVal?.name) {
-      setConceptVal(concepts[0]);
-    }
-    console.log("loop-concept");
-  }, [concepts]);
+    dispatch(getClassByBoardAction(board?._id));
+    dispatch(getSubjectsByClassAction(activeClass?._id));
+    dispatch(getChaptersBySubjectAction(subjectVal?._id));
+    dispatch(getConceptByChapterAction(chapterVal?._id));
+    setSubConcepts([]);
+    console.log("loop-1");
+  }, [board, activeClass, subjectVal, chapterVal, conceptVal]);
 
   return (
     <div>
@@ -106,11 +118,12 @@ const Concepts = () => {
                 setActiveClass(item);
               }}
             >
-              {item?.name}
+              Class {item?.name}
             </NavLink>
           </NavItem>
         ))}
       </Nav>
+
       <div className="field-wrap">
         <UncontrolledDropdown
           className="data-list-rows-dropdown rp-manageSchool-head-Opquest mr-1 d-md-block d-none"
@@ -125,7 +138,14 @@ const Concepts = () => {
           </DropdownToggle>
           <DropdownMenu className="customadmindropdown" tag="div" right>
             {subjects?.map((item) => (
-              <DropdownItem key={item?._id} onClick={() => setSubjectVal(item)}>
+              <DropdownItem
+                key={item?._id}
+                onClick={() => {
+                  setSubjectVal(item);
+                  setChapterVal({});
+                  setConceptVal({});
+                }}
+              >
                 {item?.name}
               </DropdownItem>
             ))}
@@ -144,7 +164,13 @@ const Concepts = () => {
           </DropdownToggle>
           <DropdownMenu className="customadmindropdown" tag="div" right>
             {chapters?.map((item) => (
-              <DropdownItem key={item?._id} onClick={() => setChapterVal(item)}>
+              <DropdownItem
+                key={item?._id}
+                onClick={() => {
+                  setChapterVal(item);
+                  setConceptVal({});
+                }}
+              >
                 {item?.name}
               </DropdownItem>
             ))}
@@ -176,8 +202,8 @@ const Concepts = () => {
               type="text"
               placeholder="Search by name"
               name="search-text"
-              value={""}
-              onChange={(e) => {}}
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
             />
           </form>
         </div>
@@ -185,26 +211,73 @@ const Concepts = () => {
 
       <TabContent>
         <div className="tab-content">
-          {subConcepts?.map((item, i) => {
-            const data = {
-              subConcept: item._id,
-              subject: subjectVal._id,
-            };
-            return (
-              <div className="tab_item" key={i}>
-                <div className="name">
-                  <p>{item?.name}</p>
-                </div>
-                <p>{activeClass?.name}</p>
-                <p>{subjectVal?.name}</p>
-                <div onClick={() => dispatch(selectForContentAction(data))}>
-                  <Link to="/manage-subconcepts">View & Edit</Link>
-                </div>
+          <div className="labels">
+            <p className="name">Subconcept Name</p>
+            <p>Class</p>
+            <p>Subject</p>
+            <p>View & Edit</p>
+          </div>
+          {loading ? (
+            <div className="tab_item">
+              <div className="name">
+                {/* {error?.error
+                  ? "Error: ".concat(error?.message)
+                  : "Loading ..."} */}
+                Loading ...
               </div>
-            );
-          })}
+            </div>
+          ) : (
+            subConcepts
+              ?.filter((val) => {
+                if (search === "") {
+                  return val;
+                } else if (
+                  val?.name?.toLowerCase().includes(search.toLowerCase())
+                ) {
+                  return val;
+                }
+              })
+              ?.map((item, i) => {
+                const data = {
+                  subConcept: item._id,
+                  subject: subjectVal._id,
+                };
+                return (
+                  <div className="tab_item" key={i}>
+                    <div className="name">
+                      <p>{item?.name}</p>
+                    </div>
+                    <p>{activeClass?.name}</p>
+                    <p>{subjectVal?.name}</p>
+                    <div
+                      className="link-text"
+                      onClick={() => {
+                        dispatch(selectForContentAction(data));
+                        fetchContent(subjectVal?._id, item?._id);
+                      }}
+                    >
+                      View & Edit
+                    </div>
+                  </div>
+                );
+              })
+          )}
         </div>
       </TabContent>
+      {subConcepts?.length > 0 && (
+        <div className="pagination-wrap">
+          <button
+            className="pag-btn"
+            disabled={pageNum <= 1}
+            onClick={() => setPageNum(pageNum - 1)}
+          >
+            {"<< Prev"}
+          </button>
+          <button className="pag-btn" onClick={() => setPageNum(pageNum + 1)}>
+            {"Next >>"}
+          </button>
+        </div>
+      )}
     </div>
   );
 };

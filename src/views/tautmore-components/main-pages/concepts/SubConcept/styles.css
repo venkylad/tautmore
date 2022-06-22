@@ -177,3 +177,53 @@
   height: unset;
   padding: 70px 20px 20px 20px;
 }
+
+.preview-content {
+  padding: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.preview-video {
+  padding: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.video-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 20px 30px;
+  border-radius: 18px;
+  width: 100%;
+  background: white;
+  margin-bottom: 20px;
+}
+
+.video-block div {
+  display: flex;
+  min-width: 300px;
+}
+
+.video-block p {
+  margin: 0;
+  padding-left: 8px;
+}
+
+.edit-btn {
+  text-align: end;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: 0.5px solid grey;
+  outline: none;
+  font-weight: 600;
+}
+
+.btn-wrp {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}

@@ -257,6 +257,9 @@ const SubConcepts = lazy(() =>
   import("./views/tautmore-components/main-pages/concepts/SubConcept")
 );
 
+const SubConceptsPreview = lazy(() =>
+  import("./views/tautmore-components/main-pages/concepts/SubConcept/preview")
+);
 // const ExamTests = lazy(() =>
 //   import("./views/tautmore-components/main-pages/exam-list/data-list/ListView")
 // );
@@ -365,6 +368,10 @@ class AppRouter extends React.Component {
           <AppRoute path="/manage-board" component={ManageBoardView} />
           <AppRoute path="/manage-boards" component={Concepts} />
           <AppRoute path="/manage-subconcepts" component={SubConcepts} />
+          <AppRoute
+            path="/manage-subconcepts-preview"
+            component={SubConceptsPreview}
+          />
           <AppRoute path="/manage-class" component={ManageClassView} />
 
           {/* NEW ROUTES */}
